@@ -38,22 +38,23 @@ attendees.
 
 ### Turning on edit mode
 
-**Edit mode is separate from your normal Moodle "Edit mode" course
-switch.** Even as a teacher or admin, you see the same read-only timetable
-attendees see by default. To make changes, use the **Edit mode** toggle at
-the top of the schedule itself. This exists so that organisers browsing
-the schedule day-to-day don't risk accidentally dragging a presentation out
-of place — deliberate action is required before the grid becomes
-interactive.
+Conference Scheduler uses **Moodle's own course "Edit mode" switch** — the
+same one shown at the top of every page in your course, next to your name.
+With editing off, you (and everyone else) see the same read-only timetable
+attendees get. Turn it on to make changes; turn it off again when you're
+done to go back to that same read-only view. There's no separate,
+scheduler-specific toggle to learn — if you're already used to turning
+Edit mode on to change anything else in the course, this works exactly the
+same way here.
 
-While edit mode is on, you get: room management, drag-and-drop scheduling,
-span blocks, the autoscheduler, and a quick-access GapSnap control at the
-top of the grid. Turn edit mode off when you're done to go back to the
-same view attendees have.
+While Edit mode is on, you get: room management, drag-and-drop scheduling,
+and the autoscheduler. While dragging a block, a highlighted preview shows
+exactly where it will land (including any automatic GapSnap adjustment —
+see below) before you let go.
 
 ### Managing rooms
 
-With edit mode on, use **Add room** to create a column. For each room, set:
+With Edit mode on, use **Add room** to create a column. For each room, set:
 
 - **Name**.
 - **Colour** (optional) — used as the column header background. The
@@ -68,14 +69,20 @@ deleted until you move or remove those first.
 ### Scheduling presentations
 
 The **Unscheduled** panel on the left lists every accepted submission not
-yet on the grid, showing its title, speakers, and track. With edit mode
+yet on the grid, showing its title, speakers, and track. With Edit mode
 on:
 
 - **Drag** a card from the Unscheduled panel into a room/time slot to
-  schedule it.
+  schedule it. It's given the length configured for its **presentation
+  type** in Conference Submissions (see that manual), so a Lightning Talk
+  and a full Workshop start out at their own correct lengths without you
+  having to resize every block by hand.
 - **Drag** an already-scheduled block to a new room or time to reschedule
   it.
-- **Drag the bottom edge** of a block to resize its duration.
+- **Drag the small handle on the bottom edge** of a block to resize its
+  duration — this always overrides the presentation type's default length
+  for that one block only; it doesn't change the type's own setting or
+  affect any other block.
 - Click a block's **star** to favourite it on behalf of the room (this
   mirrors the same favourite used in Conference Program and by attendees —
   see [Conference Program's manual](mod_confprogram.en.md)).
@@ -86,10 +93,8 @@ on:
 
 GapSnap enforces a minimum gap between two presentations scheduled back to
 back in the same room — useful for giving speakers and attendees time to
-move between sessions. Set the gap (in minutes) either in the activity's
-settings, or, while edit mode is on, via the **quick GapSnap control** at
-the top of the schedule grid itself, so you can adjust it on the fly while
-you're actively building the timetable.
+move between sessions. Set the gap (in minutes) in the activity's own
+settings.
 
 **GapSnap doesn't reject your drag with an error.** If you drop a block
 somewhere that would violate the gap (or genuinely overlap another block),
@@ -107,20 +112,22 @@ rooms, its text colour automatically adjusts for contrast against your
 chosen colour.
 
 Span blocks can be **edited after creation**: click an existing span block
-(with edit mode on) to reopen the same form, pre-filled, and change its
+(with Edit mode on) to reopen the same form, pre-filled, and change its
 label, colour, time, or room range.
 
 ### Running the autoscheduler
 
-For a large program, manually placing every block can be slow. With edit
+For a large program, manually placing every block can be slow. With Edit
 mode on, choose **Run autoscheduler** and set:
 
 - A **time window** to schedule into.
-- A **default duration** applied to every submission it places (there's no
-  per-submission duration otherwise).
 - Whether to **clear the existing schedule** in that window first
   (unchecked by default — by default the autoscheduler works around
   whatever's already scheduled).
+
+Each submission is placed using the length configured for its own
+presentation type in Conference Submissions (the same as a manual drag —
+see above), so there's nothing further to set for duration.
 
 The autoscheduler prioritises keeping submissions from the same **track**
 together in the same room where possible, respects your GapSnap gap, and
@@ -131,8 +138,8 @@ why not.
 
 ## For attendees
 
-Open the activity (with edit mode off, which is the default view) to see
-the published, read-only schedule:
+Open the activity (with course editing off, the default view) to see the
+published, read-only schedule:
 
 - Use the **day selector** to view one day at a time.
 - Click a scheduled block to open the presentation's detail page in
@@ -158,9 +165,11 @@ schedule is laid out to fit the chosen page size and orientation.
 
 ## Frequently asked questions
 
-**I'm an admin, why don't I see the drag-and-drop grid?**
-Edit mode is off by default for everyone, including admins — turn it on
-using the toggle at the top of the schedule.
+**I'm an admin/teacher, why don't I see the drag-and-drop grid?**
+Turn on Moodle's course **Edit mode** switch, at the top of the page next
+to your name — it's off by default for everyone, including admins. This is
+the same switch you use to edit anything else in the course; Conference
+Scheduler doesn't have a separate toggle of its own.
 
 **Why did my dragged block move somewhere I didn't drop it?**
 That's GapSnap automatically nudging it to the nearest position that
