@@ -15,7 +15,7 @@ attendees.
   - [Turning on edit mode](#turning-on-edit-mode)
   - [Managing rooms](#managing-rooms)
   - [Scheduling presentations](#scheduling-presentations)
-  - [GapSnap](#gapsnap)
+  - [SnapGap](#snapgap)
   - [Span blocks (plenaries, lunch, breaks)](#span-blocks-plenaries-lunch-breaks)
   - [Running the autoscheduler](#running-the-autoscheduler)
 - [For attendees](#for-attendees)
@@ -32,9 +32,10 @@ attendees.
 3. Under **General**, optionally set the **conference start and end
    dates** — this is a simple organiser-declared record of your event's
    dates; it doesn't restrict where blocks can be scheduled.
-4. Set the **GapSnap minimum gap** (see below) if you want a mandatory
-   buffer between presentations in the same room.
-5. Save.
+4. Save.
+
+The **SnapGap minimum gap** (see below) isn't set here — it's a quick
+control at the top of the schedule itself, once you turn Edit mode on.
 
 ### Turning on edit mode
 
@@ -49,7 +50,7 @@ same way here.
 
 While Edit mode is on, you get: room management, drag-and-drop scheduling,
 and the autoscheduler. While dragging a block, a highlighted preview shows
-exactly where it will land (including any automatic GapSnap adjustment —
+exactly where it will land (including any automatic SnapGap adjustment —
 see below) before you let go.
 
 ### Managing rooms
@@ -89,14 +90,15 @@ on:
 - Click the **track pill** on a block to jump straight to that track's
   filtered list in Conference Program.
 
-### GapSnap
+### SnapGap
 
-GapSnap enforces a minimum gap between two presentations scheduled back to
+SnapGap enforces a minimum gap between two presentations scheduled back to
 back in the same room — useful for giving speakers and attendees time to
-move between sessions. Set the gap (in minutes) in the activity's own
-settings.
+move between sessions. Set the gap (in minutes) using the **SnapGap minimum
+gap** control at the top of the schedule, visible with Edit mode on;
+changes take effect immediately.
 
-**GapSnap doesn't reject your drag with an error.** If you drop a block
+**SnapGap doesn't reject your drag with an error.** If you drop a block
 somewhere that would violate the gap (or genuinely overlap another block),
 it automatically **snaps to the nearest valid position** instead — nudging
 the block just far enough to satisfy the gap, or back to a non-overlapping
@@ -130,7 +132,7 @@ presentation type in Conference Submissions (the same as a manual drag —
 see above), so there's nothing further to set for duration.
 
 The autoscheduler prioritises keeping submissions from the same **track**
-together in the same room where possible, respects your GapSnap gap, and
+together in the same room where possible, respects your SnapGap gap, and
 randomises its placement order each run (so re-running with the same
 inputs doesn't always produce an identical layout). It reports how many
 submissions it placed and, for any it couldn't fit anywhere in the window,
@@ -172,7 +174,7 @@ the same switch you use to edit anything else in the course; Conference
 Scheduler doesn't have a separate toggle of its own.
 
 **Why did my dragged block move somewhere I didn't drop it?**
-That's GapSnap automatically nudging it to the nearest position that
+That's SnapGap automatically nudging it to the nearest position that
 satisfies the minimum gap (or avoids an overlap) — it never simply
 rejects a drop with an error.
 
