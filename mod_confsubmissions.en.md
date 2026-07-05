@@ -13,12 +13,15 @@ limits, tracks, and custom fields. Submissions made here feed directly into
 - [For organisers](#for-organisers)
   - [Adding the activity](#adding-the-activity)
   - [Managing tracks](#managing-tracks)
+  - [Managing submission types](#managing-submission-types)
   - [Configuring custom fields](#configuring-custom-fields)
+  - [Conference dates and preferred dates](#conference-dates-and-preferred-dates)
   - [Viewing all submissions](#viewing-all-submissions)
 - [For presenters](#for-presenters)
   - [Submitting an abstract](#submitting-an-abstract)
+  - [Choosing preferred dates](#choosing-preferred-dates)
   - [Adding co-presenters](#adding-co-presenters)
-  - [Editing or withdrawing a submission](#editing-or-withdrawing-a-submission)
+  - [Editing, withdrawing, or losing access to a submission](#editing-withdrawing-or-losing-access-to-a-submission)
 - [Frequently asked questions](#frequently-asked-questions)
 
 ## For organisers
@@ -60,6 +63,21 @@ editing teachers/managers).
   created any tracks yet, the track field is hidden from the submission
   form.
 
+### Managing submission types
+
+Submission types (e.g. "Lightning Talk," "Workshop," "Keynote") let presenters
+say what kind of session they're proposing, and give each type a default
+presentation length in minutes. Open **Manage submission types** to add,
+rename, or remove types.
+
+Once you've added at least one submission type, presenters must choose one
+when submitting — an instance with no submission types configured simply
+never shows this field, so you can skip this entirely for a simpler call for
+abstracts. A submission's chosen type's duration becomes the initial length
+of its block once [Conference Scheduler](mod_confscheduler.en.md) places it
+on the schedule (still freely resizable afterwards, and unaffected by later
+changes to the type's own configured duration).
+
 ### Configuring custom fields
 
 Beyond title, abstract, and track, you can define your own additional
@@ -83,6 +101,36 @@ Fields you add here appear on the submission form in the order you set, and
 their answers are visible alongside the rest of the submission wherever
 submissions are displayed to organisers/reviewers.
 
+### Conference dates and preferred dates
+
+In the activity's settings, you can optionally set a **conference start**
+and **end** date/time. These aren't required, and don't restrict anything
+about the activity by themselves — their only purpose is to define the day
+range used by **Offer preferred dates**, a separate setting just below them.
+
+Turn on **Offer preferred dates** (only available once both conference dates
+are set) to show each presenter a checkbox for every day of your conference
+on the submission form, all checked by default. A presenter can uncheck any
+day they can't attend, and [Conference Scheduler](mod_confscheduler.en.md)'s
+autoscheduler will try to place their presentation on one of their checked
+days (it still freely chooses the time of day) — though it's a preference,
+not a hard rule: if none of a presenter's preferred days have room, the
+autoscheduler still places them somewhere rather than leaving them
+unscheduled. In the schedule's edit mode, switching the day selector to a
+specific day also hides any not-yet-scheduled presentation whose preferred
+days don't include that day, so you don't accidentally drag someone onto a
+day they said they couldn't attend.
+
+**Disabling specific days**: if your conference has a day nobody should be
+offered as a preference at all (for example, a day reserved entirely for a
+workshop track, or one you know most presenters can't make), open **Manage
+disabled preferred days** and check that day. A regular presenter's checkbox
+for a disabled day still appears on the submission form — so the day list
+always looks the same to everyone — but it's shown greyed out and can't be
+checked. Editing teachers and managers are not affected by this setting:
+they still see and can select every day, disabled or not, when submitting or
+editing on someone's behalf.
+
 ### Viewing all submissions
 
 Editing teachers and managers can see every submission made to this
@@ -91,6 +139,13 @@ title, track, current status, and speakers, and links through to the full
 detail of each submission. Reviewing and deciding on submissions itself
 happens in the linked Conference Program activity, not here — this view is
 for oversight of the raw incoming submissions.
+
+Site administrators and users with the manager role can also permanently
+**delete** a submission from this view — this removes it completely,
+including its speakers and answers, and cannot be undone. Editing teachers
+deliberately cannot delete a submission (only a presenter withdrawing their
+own submission, or a manager/admin deleting it outright, can remove a
+submission from the active list).
 
 ## For presenters
 
@@ -103,6 +158,16 @@ for oversight of the raw incoming submissions.
 4. Choose a **track**, if the organiser has set any up.
 5. Fill in any additional questions the organiser has added.
 6. Confirm the **Speakers** section (see below) and submit.
+
+### Choosing preferred dates
+
+If the organiser has turned on **Offer preferred dates** (see the
+organiser's section above), you'll see a checkbox for each day of the
+conference, all checked by default. Uncheck any day you can't attend — the
+autoscheduler will try to place your presentation on one of the days you
+leave checked, though this is a preference rather than a guarantee. If the
+organiser has disabled a specific day, you'll still see it in the list, but
+greyed out and not selectable.
 
 ### Adding co-presenters
 
@@ -123,12 +188,19 @@ You can add as many co-presenters as the organiser allows, remove a row you
 added by mistake, and **drag to reorder** the list — the order you set here
 is the order speakers are listed everywhere the submission is shown.
 
-### Editing or withdrawing a submission
+### Editing, withdrawing, or losing access to a submission
 
 While the call for abstracts is still open, go to **My submissions** and
-choose your submission to edit any part of it, including the speaker list
-and their order. Once the close date passes, submissions become read-only
-from your side — contact the organiser if you need a late change.
+choose your submission to edit any part of it, including the speaker list,
+their order, and your preferred dates. Once the close date passes,
+submissions become read-only from your side — contact the organiser if you
+need a late change.
+
+If you can no longer attend, choose **Withdraw** from **My submissions**
+instead of editing it — this marks your submission as withdrawn (you'll be
+asked to confirm first) rather than deleting it, so the organiser still has
+a record of it. Withdrawing is not the same as deletion: only a site
+administrator or manager can permanently delete a submission outright.
 
 ## Frequently asked questions
 
@@ -150,3 +222,15 @@ It moves into the review workflow in the linked Conference Program
 activity. You'll typically be notified (or can check there yourself,
 depending on how the organiser has configured access) once a decision is
 made.
+
+**I unchecked all of my preferred days by mistake — what happens?**
+An empty set of preferred days is treated the same as never having a
+preference at all: the autoscheduler can place you on any day. It is not
+treated as "no day works for me."
+
+**Why is one of the preferred-date checkboxes greyed out and I can't check
+it?**
+The organiser has disabled that specific day from being offered as a
+preference — this doesn't mean you can't be scheduled on it, only that you
+can't request it as a preference. Contact the organiser if you need to be
+scheduled on that day specifically.

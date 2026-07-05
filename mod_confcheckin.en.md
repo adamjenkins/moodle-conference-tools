@@ -4,13 +4,14 @@
 **Part of the Conference Tools suite** ([overview](README.md))
 
 > **Note on current status:** Conference Check-in is still under active
-> development. Ticket types, capacity, and eligibility rules described
-> below are implemented; the payment/promo-code purchase flow, printable
-> badges with QR codes, the check-in scanner, and attendance certificates
-> are being finished in upcoming updates. This manual describes the
-> activity's intended, complete behaviour so it can be used as a reference
-> as each part becomes available — check the "current status" note in each
-> section if you're using an in-progress build.
+> development. Ticket types, capacity/eligibility rules, the payment/promo-
+> code purchase flow, and printable badge/ticket/receipt/certificate
+> templates with QR codes are all implemented; the check-in scanner and
+> attendance certificate release are being finished in an upcoming update.
+> This manual describes the activity's intended, complete behaviour so it
+> can be used as a reference as each remaining part becomes available —
+> check the "current status" note in each section if you're using an
+> in-progress build.
 
 Conference Check-in sells or issues attendance tickets, prints QR-coded
 name badges, records check-in at the door, and issues attendance
@@ -26,6 +27,7 @@ Badges achievement system.
   - [Presenter-only tickets](#presenter-only-tickets)
   - [Promo codes](#promo-codes)
   - [Badge, ticket, receipt, and certificate templates](#badge-ticket-receipt-and-certificate-templates)
+  - [Downloading badges, tickets, and receipts in bulk](#downloading-badges-tickets-and-receipts-in-bulk)
   - [Scanning attendees in](#scanning-attendees-in)
 - [For attendees](#for-attendees)
   - [Buying or claiming a ticket](#buying-or-claiming-a-ticket)
@@ -75,9 +77,6 @@ regardless of whether Conference Program has been switched to Display
 phase yet — presenters can claim their presenter ticket as soon as
 they're accepted, without waiting for the public schedule to go live.
 
-*Current status: the presenter-eligibility check and the purchase flow
-that uses it are being finished in an upcoming update.*
-
 ### Promo codes
 
 Open **Manage promo codes** to create codes that grant a specific ticket
@@ -86,26 +85,46 @@ price. For each code, set which ticket type it grants, an optional
 maximum number of uses, and an optional expiry date. A promo-code ticket
 never generates a payment receipt, since no payment occurred.
 
-*Current status: promo code management and redemption are being finished
-in an upcoming update.*
-
 ### Badge, ticket, receipt, and certificate templates
 
 Open **Manage templates** to design the four kinds of document this
-activity can produce, using a rich-text editor with placeholder fields you
-can insert (attendee name, ticket type, and — for presenters — their
-session title/time/room from Conference Program):
+activity can produce, using a rich-text (TinyMCE) editor. Each template
+type is edited separately, and starts pre-filled with a simple built-in
+layout you can freely rewrite. Insert any of these placeholders anywhere in
+a template — they're replaced with the real value when a document is
+generated:
+
+- `{{fullname}}`, `{{email}}` — the attendee's name and email address.
+- `{{tickettype}}` — the name of their ticket type.
+- `{{confcheckinname}}` — this activity's own name.
+- `{{origin}}` — how the ticket was obtained (purchased, free, or promo
+  code).
+- `{{qrcode}}` — the attendee's unique QR code image.
+- `{{submissiontitle}}`, `{{track}}` — the attendee's own accepted
+  submission title and track, but **only** if they're an eligible
+  presenter (linked via the Conference Program activity); these are simply
+  left blank for any other attendee.
+
+Any placeholder you misspell, or one that doesn't apply, is just removed
+when the document is generated — it never shows up as literal `{{...}}`
+text.
 
 - **Badge** — the printed name badge, including a unique QR code per
-  attendee once generated.
+  attendee.
 - **Ticket** — a purchase confirmation / entry pass.
 - **Receipt** — generated only for a genuinely paid ticket; never
   generated for a free or promo-code ticket.
 - **Certificate** — the attendance certificate, released only after the
   attendee has been checked in (see below).
 
-*Current status: template editing and PDF generation are planned for an
-upcoming update.*
+### Downloading badges, tickets, and receipts in bulk
+
+If you hold the bulk-download capability, **Download all Badges**/
+**Tickets**/**Receipts** on the activity's main page produces a single ZIP
+file containing every attendee's PDF of that type. A deleted user's ticket,
+or one whose ticket type was itself deleted, is skipped rather than
+failing the whole download; the receipts ZIP only ever includes genuinely
+paid tickets.
 
 ### Scanning attendees in
 
@@ -125,18 +144,15 @@ upcoming update.*
 Open the Conference Check-in activity and choose from the available
 ticket types. A zero-price ticket type, or a valid promo code, issues your
 ticket immediately with no payment step. A priced ticket type takes you
-through your site's normal payment checkout.
-
-*Current status: this purchase screen is being finished in an upcoming
-update.*
+through your site's normal payment checkout. **Your tickets** on the same
+page lists everything you've claimed so far, with download links for each.
 
 ### Your badge and QR code
 
-Once you have a ticket, download your badge as a PDF — it includes a
-unique QR code that identifies your ticket at check-in. Keep it accessible
-on your phone or print it in advance.
-
-*Current status: planned for an upcoming update.*
+From **Your tickets**, download your badge (and, if you like, your ticket
+and — for a genuinely paid ticket only — your receipt) as a PDF. Your badge
+includes a unique QR code that identifies your ticket at check-in. Keep it
+accessible on your phone or print it in advance.
 
 ### Getting checked in
 

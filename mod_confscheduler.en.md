@@ -164,11 +164,15 @@ presentation type in Conference Submissions (the same as a manual drag —
 see above), so there's nothing further to set for duration.
 
 The autoscheduler prioritises keeping submissions from the same **track**
-together in the same room where possible, respects your SnapGap gap, and
-randomises its placement order each run (so re-running with the same
-inputs doesn't always produce an identical layout). It reports how many
-submissions it placed and, for any it couldn't fit anywhere in the window,
-why not.
+together in the same room where possible, tries to place a submission on
+one of its presenter's preferred dates (if Conference Submissions has that
+feature turned on and the presenter recorded any), respects your SnapGap
+gap, and randomises its placement order each run (so re-running with the
+same inputs doesn't always produce an identical layout). Preferred dates
+are a preference, not a hard rule: if none of a submission's preferred
+days have room, it's still placed somewhere in the window rather than left
+unscheduled. It reports how many submissions it placed and, for any it
+couldn't fit anywhere in the window, why not.
 
 ## For attendees
 
