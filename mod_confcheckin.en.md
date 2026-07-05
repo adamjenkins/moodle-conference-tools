@@ -3,15 +3,12 @@
 **Activity type:** `mod_confcheckin`
 **Part of the Conference Tools suite** ([overview](README.md))
 
-> **Note on current status:** Conference Check-in is still under active
-> development. Ticket types, capacity/eligibility rules, the payment/promo-
-> code purchase flow, and printable badge/ticket/receipt/certificate
-> templates with QR codes are all implemented; the check-in scanner and
-> attendance certificate release are being finished in an upcoming update.
-> This manual describes the activity's intended, complete behaviour so it
-> can be used as a reference as each remaining part becomes available —
-> check the "current status" note in each section if you're using an
-> in-progress build.
+> **Note on current status:** Conference Check-in's full feature set
+> described in this manual is implemented: ticket types (including
+> group/enrolment auto-grant), capacity/eligibility rules, the payment/
+> promo-code purchase flow, printable badge/ticket/receipt/certificate
+> templates with QR codes, the check-in scanner (browser and Moodle app),
+> and certificate release after check-in.
 
 Conference Check-in sells or issues attendance tickets, prints QR-coded
 name badges, records check-in at the door, and issues attendance
@@ -25,8 +22,10 @@ Badges achievement system.
   - [Adding the activity](#adding-the-activity)
   - [Setting up ticket types](#setting-up-ticket-types)
   - [Presenter-only tickets](#presenter-only-tickets)
+  - [Auto-granting tickets by group or enrolment method](#auto-granting-tickets-by-group-or-enrolment-method)
   - [Promo codes](#promo-codes)
   - [Badge, ticket, receipt, and certificate templates](#badge-ticket-receipt-and-certificate-templates)
+  - [Changing the placeholder delimiter](#changing-the-placeholder-delimiter)
   - [Downloading badges, tickets, and receipts in bulk](#downloading-badges-tickets-and-receipts-in-bulk)
   - [Scanning attendees in](#scanning-attendees-in)
 - [For attendees](#for-attendees)
@@ -77,6 +76,28 @@ regardless of whether Conference Program has been switched to Display
 phase yet — presenters can claim their presenter ticket as soon as
 they're accepted, without waiting for the public schedule to go live.
 
+### Auto-granting tickets by group or enrolment method
+
+When adding or editing a ticket type, the **Auto-grant** section lets you
+link it to *either* a course group *or* a specific enrolment method
+(not both) already set up in this course. From then on, joining that group
+— or being enrolled via that method — automatically issues that person a
+free ticket of this type, at no charge regardless of the ticket type's
+normal price. This is useful for e.g. comping a ticket to a "Volunteers"
+group, or to everyone who enrols via a specific self-enrolment key.
+
+Saving this link also immediately grants a ticket to every current member
+or enrolled user, not just people who join afterwards.
+
+If someone later leaves the group, or their enrolment is removed, their
+ticket is **left alone** — it is not automatically taken back. To review
+and, if appropriate, manually take back a ticket whose granting condition
+no longer holds, open **Orphaned tickets** from the ticket types page. It
+lists every such ticket along with why it's orphaned (left the group /
+no longer enrolled), whether the person has already checked in, and a
+**Revoke** action that permanently deletes the ticket (and any recorded
+check-in) and frees up its capacity again.
+
 ### Promo codes
 
 Open **Manage promo codes** to create codes that grant a specific ticket
@@ -92,30 +113,47 @@ activity can produce, using a rich-text (TinyMCE) editor. Each template
 type is edited separately, and starts pre-filled with a simple built-in
 layout you can freely rewrite. Insert any of these placeholders anywhere in
 a template — they're replaced with the real value when a document is
-generated:
+generated (the exact markers shown below, `[[like this]]`, are this site's
+current delimiter — see
+[Changing the placeholder delimiter](#changing-the-placeholder-delimiter)):
 
-- `{{fullname}}`, `{{email}}` — the attendee's name and email address.
-- `{{tickettype}}` — the name of their ticket type.
-- `{{confcheckinname}}` — this activity's own name.
-- `{{origin}}` — how the ticket was obtained (purchased, free, or promo
-  code).
-- `{{qrcode}}` — the attendee's unique QR code image.
-- `{{submissiontitle}}`, `{{track}}` — the attendee's own accepted
+- `[[fullname]]`, `[[email]]` — the attendee's name and email address.
+- `[[tickettype]]` — the name of their ticket type.
+- `[[confcheckinname]]` — this activity's own name.
+- `[[coursefullname]]`, `[[courseshortname]]` — this activity's own
+  course's full and short name.
+- `[[origin]]` — how the ticket was obtained (purchased, free, promo code,
+  or auto-granted).
+- `[[qrcode]]` — the attendee's unique QR code image.
+- `[[submissiontitle]]`, `[[track]]` — the attendee's own accepted
   submission title and track, but **only** if they're an eligible
   presenter (linked via the Conference Program activity); these are simply
   left blank for any other attendee.
 
 Any placeholder you misspell, or one that doesn't apply, is just removed
-when the document is generated — it never shows up as literal `{{...}}`
-text.
+when the document is generated — it never shows up as literal marker text.
 
 - **Badge** — the printed name badge, including a unique QR code per
   attendee.
 - **Ticket** — a purchase confirmation / entry pass.
 - **Receipt** — generated only for a genuinely paid ticket; never
-  generated for a free or promo-code ticket.
+  generated for a free, promo-code, or auto-granted ticket.
 - **Certificate** — the attendance certificate, released only after the
   attendee has been checked in (see below).
+
+### Changing the placeholder delimiter
+
+By default, a template placeholder is written with double square brackets,
+e.g. `[[fullname]]`. A site administrator can change the opening/closing
+delimiter for the whole site under this activity's admin settings (Site
+administration → Plugins → Activity modules → Conference Check-in). This
+applies everywhere on the site, not per-activity, so every organiser shares
+one consistent convention.
+
+If you change this setting after templates have already been written,
+existing templates keep using the *old* delimiter's text, which will no
+longer be recognised — you'll need to update those templates to the new
+delimiter yourself.
 
 ### Downloading badges, tickets, and receipts in bulk
 
@@ -128,14 +166,18 @@ paid tickets.
 
 ### Scanning attendees in
 
-At the event, a staff member with the check-in capability opens the
-scanner (usable in a regular browser, or as a mobile-friendly page inside
-the Moodle app) and scans each attendee's badge QR code to record their
-check-in. Re-scanning an already-checked-in badge is handled gracefully
-rather than creating a duplicate record.
-
-*Current status: the scanner and check-in recording are planned for an
-upcoming update.*
+At the event, a staff member with the check-in capability opens **Scan
+check-in** from the activity's main page (or, inside the Moodle app, the
+same screen as a mobile-friendly addon) to record attendees as they
+arrive. The scanner always offers a text field that accepts input from a
+USB or Bluetooth barcode scanner (which types the code as if typed on a
+keyboard) — just scan a badge and its check-in is recorded immediately. If
+the device's browser supports camera-based scanning, a "Scan with camera"
+button also appears, letting staff point a phone or tablet's camera
+directly at a badge instead. Re-scanning an already-checked-in badge is
+handled gracefully (shown as "already checked in") rather than creating a
+duplicate record, and a badge scanned at the wrong event is clearly
+rejected.
 
 ## For attendees
 
@@ -157,16 +199,15 @@ accessible on your phone or print it in advance.
 ### Getting checked in
 
 At the venue, present your badge's QR code to a staff member for scanning.
-You only need to do this once per event.
-
-*Current status: planned for an upcoming update.*
+You only need to do this once per event — scanning it again is harmless
+and won't create a duplicate record.
 
 ### Downloading your certificate
 
 After you've been checked in, an attendance certificate becomes available
-for you to download from the activity.
-
-*Current status: planned for an upcoming update.*
+for you to download from **Your tickets** on the activity's main page. It
+isn't available before check-in — trying to download it earlier tells you
+it isn't ready yet.
 
 ## Frequently asked questions
 
@@ -184,3 +225,15 @@ phase being switched on.
 No. In this activity, "badge" always means the printed name badge/nametag
 you wear at the event — it has nothing to do with Moodle's own digital
 Open Badges achievement system.
+
+**I left the group my ticket was auto-granted from — did I lose my
+ticket?**
+No. A ticket, once granted, is never automatically taken back. An
+organiser can see that your ticket's granting condition no longer holds
+(via the "Orphaned tickets" report) and choose to manually revoke it, but
+nothing happens automatically.
+
+**Can I get a certificate before I'm checked in?**
+No — the certificate is only generated once you've actually been checked
+in at the venue. Trying to download it earlier tells you it isn't ready
+yet.
