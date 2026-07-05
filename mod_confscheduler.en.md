@@ -15,6 +15,7 @@ attendees.
   - [Turning on edit mode](#turning-on-edit-mode)
   - [Managing rooms](#managing-rooms)
   - [Scheduling presentations](#scheduling-presentations)
+  - [Days and the conference date range](#days-and-the-conference-date-range)
   - [SnapGap](#snapgap)
   - [Row height](#row-height)
   - [Span blocks (plenaries, lunch, breaks)](#span-blocks-plenaries-lunch-breaks)
@@ -30,9 +31,11 @@ attendees.
 1. Add a **Conference Scheduler** activity to your course.
 2. Link it to the **Conference Program** activity in the same course whose
    accepted submissions it should schedule.
-3. Under **General**, optionally set the **conference start and end
-   dates** — this is a simple organiser-declared record of your event's
-   dates; it doesn't restrict where blocks can be scheduled.
+3. Under **General**, set the **conference start and end dates**. These
+   are **required** — they drive which days you can pick on the schedule
+   (including an "All days" view), the autoscheduler's default time
+   window, and grey out (and refuse to let you drag a presentation into)
+   any time before the start or after the end.
 4. Save.
 
 The **SnapGap minimum gap** (see below) isn't set here — it's a quick
@@ -91,6 +94,22 @@ on:
 - Click the **track pill** on a block to jump straight to that track's
   filtered list in Conference Program.
 
+### Days and the conference date range
+
+The **Day** dropdown at the top of the schedule lists every day within
+your conference's start/end dates (even a day with nothing scheduled on
+it yet, so you can still drop a presentation onto it), plus **All days**,
+which lists every day as its own separate table on the same page instead
+of one day at a time — handy for a quick overview of the whole event.
+Editing (dragging blocks) is only available one day at a time; switch
+away from "All days" first if you want to reschedule something.
+
+Any time outside your conference's start/end dates is shown with a
+diagonal grey hatch, and you can't drop a presentation into it — dragging
+a block toward a greyed area automatically "bounces" it back to the
+nearest valid time, the same way SnapGap bounces a block away from
+another one it's too close to (see below).
+
 ### SnapGap
 
 SnapGap enforces a minimum gap between two presentations scheduled back to
@@ -134,7 +153,8 @@ label, colour, time, or room range.
 For a large program, manually placing every block can be slow. With Edit
 mode on, choose **Run autoscheduler** and set:
 
-- A **time window** to schedule into.
+- A **time window** to schedule into — pre-filled with your conference's
+  start/end dates, so you usually don't need to change it.
 - Whether to **clear the existing schedule** in that window first
   (unchecked by default — by default the autoscheduler works around
   whatever's already scheduled).
@@ -155,7 +175,8 @@ why not.
 Open the activity (with course editing off, the default view) to see the
 published, read-only schedule:
 
-- Use the **day selector** to view one day at a time.
+- Use the **day selector** to view one day at a time, or choose **All
+  days** to see every day's schedule, one table per day, on the same page.
 - Click a scheduled block to open the presentation's detail page in
   Conference Program.
 - Click the **star** to add a session to **My timetable**, then use the
@@ -196,5 +217,7 @@ may return in a future update. The schedule always renders in its
 standard light appearance.
 
 **Does the schedule enforce the conference start/end dates I set?**
-No — those dates are just a record for your own reference; they don't
-currently restrict where you can place a block.
+Yes. Conference dates are required, and any time outside them is greyed
+out and off-limits — dragging a block toward a greyed area bounces it
+back to the nearest valid time, the same way SnapGap does. See "Days and
+the conference date range" above.
