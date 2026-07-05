@@ -16,6 +16,7 @@ attendees.
   - [Managing rooms](#managing-rooms)
   - [Scheduling presentations](#scheduling-presentations)
   - [SnapGap](#snapgap)
+  - [Row height](#row-height)
   - [Span blocks (plenaries, lunch, breaks)](#span-blocks-plenaries-lunch-breaks)
   - [Running the autoscheduler](#running-the-autoscheduler)
 - [For attendees](#for-attendees)
@@ -104,6 +105,17 @@ it automatically **snaps to the nearest valid position** instead — nudging
 the block just far enough to satisfy the gap, or back to a non-overlapping
 time. You'll always end up with a valid placement; you never need to
 retry a drag by trial and error.
+
+### Row height
+
+Right next to SnapGap's control is **Row height (pixels per hour)** — how
+tall one hour appears on the schedule. The default suits most conferences;
+increase it if short presentations don't have enough room to show their
+title and speaker names without crowding, or decrease it to fit a longer
+day on screen with less scrolling. Changes take effect immediately, apply
+to everyone (organisers and attendees alike, since the read-only attendee
+view uses the same setting), and don't move or resize anything you've
+already scheduled — only the visual density changes.
 
 ### Span blocks (plenaries, lunch, breaks)
 
