@@ -25,6 +25,7 @@ Badges achievement system.
   - [Auto-granting tickets by group or enrolment method](#auto-granting-tickets-by-group-or-enrolment-method)
   - [Promo codes](#promo-codes)
   - [Badge, ticket, receipt, and certificate templates](#badge-ticket-receipt-and-certificate-templates)
+  - [Customising what presentationinfo shows](#customising-what-presentationinfo-shows)
   - [Changing the placeholder delimiter](#changing-the-placeholder-delimiter)
   - [Downloading badges, tickets, and receipts in bulk](#downloading-badges-tickets-and-receipts-in-bulk)
   - [Scanning attendees in](#scanning-attendees-in)
@@ -128,7 +129,13 @@ current delimiter — see
 - `[[submissiontitle]]`, `[[track]]` — the attendee's own accepted
   submission title and track, but **only** if they're an eligible
   presenter (linked via the Conference Program activity); these are simply
-  left blank for any other attendee.
+  left blank for any other attendee, and only ever show their *first*
+  accepted submission if they have more than one.
+- `[[presentationinfo]]` — like the above, but lists **every** accepted
+  submission an eligible presenter is presenting (not just the first),
+  one per line. What each line shows is configurable separately for each
+  of the four template types below — see
+  [Customising what presentationinfo shows](#customising-what-presentationinfo-shows).
 
 Any placeholder you misspell, or one that doesn't apply, is just removed
 when the document is generated — it never shows up as literal marker text.
@@ -140,6 +147,26 @@ when the document is generated — it never shows up as literal marker text.
   generated for a free, promo-code, or auto-granted ticket.
 - **Certificate** — the attendance certificate, released only after the
   attendee has been checked in (see below).
+
+### Customising what presentationinfo shows
+
+Each of the four template types has its own **Presentation info format**
+box, right below its content editor. This is a small "template within a
+template": whatever you type there is applied once for *each* presentation
+a presenter is presenting, and the results are joined with a line break to
+build `[[presentationinfo]]`.
+
+It has its own tiny set of markers — `{title}` and `{track}` (single curly
+braces, deliberately different from the `[[ ]]`-style markers above, so the
+two never get confused) — for example:
+
+```
+<strong>{title}</strong> ({track})
+```
+
+Leave this box blank to just show the title on its own. A submission with
+no track leaves `{track}` blank, so anything you type around it (like the
+parentheses above) still shows up empty for that presentation.
 
 ### Changing the placeholder delimiter
 
