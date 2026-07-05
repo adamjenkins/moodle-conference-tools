@@ -158,21 +158,34 @@ mode on, choose **Run autoscheduler** and set:
 - Whether to **clear the existing schedule** in that window first
   (unchecked by default — by default the autoscheduler works around
   whatever's already scheduled).
+- Whether to **ignore preferred dates** (unchecked by default — see below).
 
 Each submission is placed using the length configured for its own
 presentation type in Conference Submissions (the same as a manual drag —
 see above), so there's nothing further to set for duration.
 
 The autoscheduler prioritises keeping submissions from the same **track**
-together in the same room where possible, tries to place a submission on
-one of its presenter's preferred dates (if Conference Submissions has that
-feature turned on and the presenter recorded any), respects your SnapGap
-gap, and randomises its placement order each run (so re-running with the
-same inputs doesn't always produce an identical layout). Preferred dates
-are a preference, not a hard rule: if none of a submission's preferred
-days have room, it's still placed somewhere in the window rather than left
-unscheduled. It reports how many submissions it placed and, for any it
-couldn't fit anywhere in the window, why not.
+together in the same room where possible, respects your SnapGap gap, and
+randomises its placement order each run (so re-running with the same
+inputs doesn't always produce an identical layout). It reports how many
+submissions it placed and, for any it couldn't fit anywhere in the window,
+why not.
+
+**Preferred dates**: if a presenter recorded preferred conference days
+(Conference Submissions' "offer preferred dates" feature), the
+autoscheduler by default only ever places their submission on one of those
+days. If none of them have room anywhere in the window, that submission is
+left unscheduled and reported as "could not be placed," rather than being
+placed on a day the presenter said they couldn't attend. Check **Ignore
+preferred dates** before running to change this for that one run: the
+autoscheduler will still try a preferred day first, but falls back to
+placing on any day in the window if none of the preferred ones have room,
+so nothing gets left unscheduled purely because of a preference. A
+presentation that ends up scheduled on a day its presenter did not prefer —
+whether from an ignore-preferred-dates run, or from you manually dragging
+it there — is shown with a distinct amber border and hatching while Edit
+mode is on, as a reminder; with Edit mode off, it displays exactly like any
+other block.
 
 ## For attendees
 

@@ -112,14 +112,16 @@ Turn on **Offer preferred dates** (only available once both conference dates
 are set) to show each presenter a checkbox for every day of your conference
 on the submission form, all checked by default. A presenter can uncheck any
 day they can't attend, and [Conference Scheduler](mod_confscheduler.en.md)'s
-autoscheduler will try to place their presentation on one of their checked
-days (it still freely chooses the time of day) — though it's a preference,
-not a hard rule: if none of a presenter's preferred days have room, the
-autoscheduler still places them somewhere rather than leaving them
-unscheduled. In the schedule's edit mode, switching the day selector to a
-specific day also hides any not-yet-scheduled presentation whose preferred
-days don't include that day, so you don't accidentally drag someone onto a
-day they said they couldn't attend.
+autoscheduler will, by default, only ever place their presentation on one of
+their checked days (it still freely chooses the time of day) — if none of
+them have room, the submission is left unscheduled rather than placed on a
+day the presenter said they couldn't attend, though the organiser can check
+an "ignore preferred dates" option when running the autoscheduler to fall
+back to any day instead, for that one run. In the schedule's edit mode,
+switching the day selector to a specific day also hides any not-yet-
+scheduled presentation whose preferred days don't include that day, so an
+organiser doesn't accidentally drag someone onto a day they said they
+couldn't attend.
 
 **Disabling specific days**: if your conference has a day nobody should be
 offered as a preference at all (for example, a day reserved entirely for a
