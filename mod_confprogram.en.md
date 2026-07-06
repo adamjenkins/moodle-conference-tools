@@ -25,6 +25,7 @@ The activity always operates in one of two **phases**:
   - [Recording decisions](#recording-decisions)
   - [Switching to Display phase](#switching-to-display-phase)
   - [Controlling what attendees see](#controlling-what-attendees-see)
+  - [Notifications](#notifications)
 - [For reviewers](#for-reviewers)
 - [For presenters](#for-presenters-resubmission)
 - [For attendees](#for-attendees)
@@ -108,6 +109,21 @@ This lets you keep the list compact (e.g. title, track, speaker, time/room
 only) while still surfacing the full abstract and any extra fields in the
 detail popup.
 
+### Notifications
+
+Once you switch to Display phase, every submission's decision — accept,
+reject, or waitlist — is automatically emailed to its speaker(s). A decision
+recorded while still in Review phase is never emailed early; it's queued
+and sent the moment you switch to Display phase, so a presenter never learns
+their result before you're ready to publish.
+
+Open **Manage notifications** to customise the subject/message for this
+email, or switch it off entirely for this instance with **Enable
+notifications**. Turning notifications back on later still delivers any
+decision that was recorded while they were off — nothing is lost, only
+delayed. Placeholders available include `[[fullname]]`,
+`[[submissiontitle]]`, `[[coursename]]`, and `[[decision]]`.
+
 ## For reviewers
 
 Open **My review queue** to see submissions assigned to you. For each:
@@ -163,3 +179,10 @@ Either it hasn't been assigned to you yet, or it's marked **unvetted**
 Yes, intentionally — "favourite" is one shared piece of state used by both
 Conference Program's list and Conference Scheduler's "my timetable"
 highlight, so you only ever need to star a session once.
+
+**When exactly does a presenter get emailed about their decision?**
+The moment the organiser switches the instance to Display phase — not when
+the decision is first recorded. If a decision was made while still in
+Review phase, it's queued and the email goes out with everyone else's the
+instant Display phase begins (unless the organiser has switched
+notifications off entirely for this instance).

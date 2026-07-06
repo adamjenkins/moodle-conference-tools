@@ -23,6 +23,7 @@ Badges achievement system.
   - [Setting up ticket types](#setting-up-ticket-types)
   - [Presenter-only tickets](#presenter-only-tickets)
   - [Auto-granting tickets by group or enrolment method](#auto-granting-tickets-by-group-or-enrolment-method)
+  - [Requiring group or enrolment membership to purchase a ticket](#requiring-group-or-enrolment-membership-to-purchase-a-ticket)
   - [Promo codes](#promo-codes)
   - [Badge, ticket, receipt, and certificate templates](#badge-ticket-receipt-and-certificate-templates)
   - [Customising what presentationinfo shows](#customising-what-presentationinfo-shows)
@@ -98,6 +99,26 @@ lists every such ticket along with why it's orphaned (left the group /
 no longer enrolled), whether the person has already checked in, and a
 **Revoke** action that permanently deletes the ticket (and any recorded
 check-in) and frees up its capacity again.
+
+### Requiring group or enrolment membership to purchase a ticket
+
+The **Eligibility** section on a ticket type is a separate setting from
+Auto-grant above, even though both link to a course group or enrolment
+method — easy to mix up, so it's worth being clear on the difference:
+
+- **Auto-grant** *issues* a free ticket automatically the moment someone
+  joins the linked group or enrols via the linked method.
+- **Eligibility** instead *gates* whether someone may buy or claim this
+  ticket type at all — they still have to go through the normal purchase
+  or claim flow themselves; membership only unlocks that they're allowed
+  to.
+
+Set an eligibility group or enrolment method (not both — like Auto-grant,
+these are mutually exclusive) and only members of that group, or people
+enrolled via that method, will be able to purchase or claim this ticket
+type; everyone else won't see it as available. This combines with (rather
+than replaces) the **presenter only** restriction above — a ticket type
+can require both, either, or neither.
 
 ### Promo codes
 
@@ -216,6 +237,11 @@ ticket immediately with no payment step. A priced ticket type takes you
 through your site's normal payment checkout. **Your tickets** on the same
 page lists everything you've claimed so far, with download links for each.
 
+Some ticket types are restricted to presenters, or to members of a
+specific course group or a specific enrolment method — if you don't meet
+one of these requirements, that ticket type simply won't appear as
+available to you.
+
 ### Your badge and QR code
 
 From **Your tickets**, download your badge (and, if you like, your ticket
@@ -247,6 +273,13 @@ published before I can get my presenter ticket?**
 No — presenter-ticket eligibility is checked against your own acceptance
 status directly, which doesn't depend on Conference Program's Display
 phase being switched on.
+
+**A ticket type I was expecting isn't showing up for me — why?**
+It may be presenter-only, or restricted to members of a specific course
+group or a specific enrolment method — these are two independent
+requirements the organiser can set per ticket type, either alone, both
+together, or neither. Check with the organiser if you believe you should
+qualify.
 
 **Is the "badge" the same as a Moodle Open Badge?**
 No. In this activity, "badge" always means the printed name badge/nametag

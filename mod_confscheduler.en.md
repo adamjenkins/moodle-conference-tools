@@ -20,6 +20,7 @@ attendees.
   - [Row height](#row-height)
   - [Span blocks (plenaries, lunch, breaks)](#span-blocks-plenaries-lunch-breaks)
   - [Running the autoscheduler](#running-the-autoscheduler)
+  - [Notifications](#notifications)
 - [For attendees](#for-attendees)
 - [Printing the schedule](#printing-the-schedule)
 - [Frequently asked questions](#frequently-asked-questions)
@@ -66,10 +67,19 @@ With Edit mode on, use **Add room** to create a column. For each room, set:
   header's text automatically switches between black and white to stay
   readable against whatever colour you pick, so you don't need to
   separately worry about contrast.
+- **Capacity** (optional) — the room's maximum attendee capacity, shown in
+  its column header once set. Leave it blank for an unlimited room.
 
 Drag a room's header to reorder columns. A room can be edited or deleted at
 any time; a room that still has presentations scheduled in it can't be
 deleted until you move or remove those first.
+
+If a room has a capacity set, a presentation scheduled into it is
+highlighted (in Edit mode only) as a possible **overbooking** once the
+number of attendees who have favourited it exceeds that capacity — this is
+purely informational, never a hard restriction, since overbooking a room
+(standing room, or a bigger room simply being unavailable that slot) can be
+a legitimate organiser choice.
 
 ### Scheduling presentations
 
@@ -187,6 +197,28 @@ it there — is shown with a distinct amber border and hatching while Edit
 mode is on, as a reminder; with Edit mode off, it displays exactly like any
 other block.
 
+### Notifications
+
+Unlike Conference Submissions and Conference Program, scheduling
+notifications here are **never automatic** — a schedule is typically
+rearranged many times while you're building it, and emailing speakers on
+every drag would be noise. Instead, the toolbar (Edit mode on) shows a
+**Send notifications** button with a live count of presentations whose
+scheduling information has changed since they were last notified. Click it
+whenever you're ready — it emails only those speakers, skipping anyone
+whose time/room hasn't changed since the last send, so you can click it
+again later after making further changes without re-notifying speakers
+who weren't affected.
+
+Open **Manage notifications** to customise the subject/message, or switch
+notifications off entirely for this instance with **Enable notifications**.
+While off, the pending count still updates as you reschedule things, but
+clicking **Send notifications** sends nothing — nothing is lost, though:
+turn notifications back on and click the button again to deliver everything
+that built up while they were disabled. Placeholders available include
+`[[fullname]]`, `[[submissiontitle]]`, `[[coursename]]`, `[[roomnames]]`,
+`[[starttime]]`, and `[[endtime]]`.
+
 ## For attendees
 
 Open the activity (with course editing off, the default view) to see the
@@ -200,6 +232,10 @@ published, read-only schedule:
   **My timetable** toggle to highlight your favourites and grey out
   everything else — handy for finding your own sessions at a glance in a
   busy schedule.
+- Once you've starred your favourites, click **Export my timetable (.ics)**
+  next to the My timetable toggle to download them as a calendar file you
+  can import into any calendar app (Google Calendar, Outlook, Apple
+  Calendar, and so on).
 - Click a **track pill** to see everything else in that track.
 
 ## Printing the schedule
@@ -238,3 +274,21 @@ Yes. Conference dates are required, and any time outside them is greyed
 out and off-limits — dragging a block toward a greyed area bounces it
 back to the nearest valid time, the same way SnapGap does. See "Days and
 the conference date range" above.
+
+**Why didn't rescheduling a presentation email its speaker?**
+Scheduling notifications here are never sent automatically. Click **Send
+notifications** in the toolbar when you're ready — it emails everyone
+whose scheduling information has changed since the last time you clicked
+it.
+
+**Does the "overbooked" highlight stop me from scheduling into a full
+room?**
+No — it's informational only. You can still schedule into a room whose
+capacity a presentation's favourite count already exceeds; sometimes
+that's a deliberate choice (standing room, or the only room available at
+that time).
+
+**I exported my timetable, but the file is empty — why?**
+You haven't starred any sessions yet (or none of your starred sessions
+are currently scheduled). Star at least one session with **My timetable**
+first, then export again.

@@ -17,6 +17,7 @@ limits, tracks, and custom fields. Submissions made here feed directly into
   - [Configuring custom fields](#configuring-custom-fields)
   - [Conference dates and preferred dates](#conference-dates-and-preferred-dates)
   - [Viewing all submissions](#viewing-all-submissions)
+  - [Notifications](#notifications)
 - [For presenters](#for-presenters)
   - [Submitting an abstract](#submitting-an-abstract)
   - [Choosing preferred dates](#choosing-preferred-dates)
@@ -149,6 +150,22 @@ deliberately cannot delete a submission (only a presenter withdrawing their
 own submission, or a manager/admin deleting it outright, can remove a
 submission from the active list).
 
+### Notifications
+
+Presenters are automatically emailed when a submission is made (every
+speaker with a Moodle account, not just the submitter), and every editing
+teacher in the course is emailed if a submission is withdrawn.
+
+Open **Manage notifications** to customise the subject and message body sent
+for each of these, or to switch off notifications entirely for this
+instance with the **Enable notifications** checkbox — useful if you'd
+rather rely on your own out-of-band communication with presenters. A
+built-in default subject/body is used until you save your own; leaving
+either field blank reverts to that default rather than sending a blank
+email. You can use placeholders like `[[fullname]]`, `[[submissiontitle]]`,
+and `[[coursename]]` in your own text — see the placeholder list shown on
+the page itself for the full set available to each notification type.
+
 ## For presenters
 
 ### Submitting an abstract
@@ -220,10 +237,11 @@ Yes — open the submission for editing and change that row's mode; your
 choice is saved when you save the submission.
 
 **What happens to my submission after I submit it?**
-It moves into the review workflow in the linked Conference Program
-activity. You'll typically be notified (or can check there yourself,
-depending on how the organiser has configured access) once a decision is
-made.
+You'll get an email confirming it was received (unless the organiser has
+turned notifications off for this instance), and it moves into the review
+workflow in the linked Conference Program activity. You'll be emailed again
+once a decision — accepted, rejected, or waitlisted — is made and the
+organiser has published the programme.
 
 **I unchecked all of my preferred days by mistake — what happens?**
 An empty set of preferred days is treated the same as never having a
