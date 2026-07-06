@@ -18,6 +18,7 @@ attendees.
   - [Days and the conference date range](#days-and-the-conference-date-range)
   - [SnapGap](#snapgap)
   - [Row height](#row-height)
+  - [Day start/day end](#day-startday-end)
   - [Span blocks (plenaries, lunch, breaks)](#span-blocks-plenaries-lunch-breaks)
   - [Running the autoscheduler](#running-the-autoscheduler)
   - [Notifications](#notifications)
@@ -146,6 +147,19 @@ to everyone (organisers and attendees alike, since the read-only attendee
 view uses the same setting), and don't move or resize anything you've
 already scheduled — only the visual density changes.
 
+### Day start/day end
+
+By default, the schedule grid sizes its visible time range from whatever's
+actually scheduled that day. If you'd rather it always show a fixed daily
+window — say 08:00 to 18:00, even before anything's been scheduled yet —
+uncheck **Automatic** next to the row height control and set **Day start**
+and **Day end**. If something ends up scheduled outside that window (an
+early setup session, say), it's still shown in full — the grid quietly
+widens just enough to fit it — with the out-of-window portion greyed the
+same way times outside your conference's start/end dates already are, so
+it's clear at a glance that it's outside the normal day. Re-check
+**Automatic** at any time to go back to the original behaviour.
+
 ### Span blocks (plenaries, lunch, breaks)
 
 For anything that isn't a submitted presentation — a plenary, lunch break,
@@ -240,16 +254,16 @@ published, read-only schedule:
 
 ## Printing the schedule
 
-The **Print** controls (visible in the read-only view) let you choose:
+The **Print** controls (visible in the read-only view) let you choose
+**Colour** or **black & white** — black & white strips room colour theming
+down to plain borders and text, so it stays legible on a monochrome printer
+or photocopier. This choice now applies immediately on screen, not just
+when you print, so you can preview it before printing.
 
-- **Colour** or **black & white** (black & white strips room colour
-  theming down to plain borders and text, so it stays legible on a
-  monochrome printer or photocopier).
-- **Paper size** — A4, A3, or A2.
-- **Portrait** or **landscape** orientation.
-
-Choose your options, then use your browser's normal print command; the
-schedule is laid out to fit the chosen page size and orientation.
+Paper size and orientation are no longer controlled here — pick them in
+your browser's own print dialog instead, which typically gives you more
+options (including A2) and better scaling than a fixed setting on this
+page ever could.
 
 ## Frequently asked questions
 
