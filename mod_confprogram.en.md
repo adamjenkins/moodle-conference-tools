@@ -55,6 +55,10 @@ Open **Assign reviewers**. You can:
   concept).
 - Filter the submission list by track before bulk-assigning, so e.g. all
   "Technical" track submissions go to your technical reviewers.
+- Arriving via the Decisions report's **Start a new round** link instead
+  lands you here already filtered to every submission with a **Resubmit**
+  decision awaiting a reviewer for its new round, ready for a bulk group
+  assignment in one action.
 - Set a **maximum number of reviews** per reviewer, either as an
   instance-wide default or overridden per reviewer, so no one reviewer gets
   overloaded.
@@ -79,14 +83,30 @@ already arranged directly — don't need peer review. Mark these
 
 ### Recording decisions
 
-Once a submission has enough reviews, record a decision from the
-**Decisions** report: **Accept**, **Reject**, **Waitlist**, or
-**Resubmit**. If you choose blind review (see below), reviewer feedback
-shown to the presenter never reveals the reviewer's identity.
+Once submissions have enough reviews, record decisions from the
+**Decisions** report — a table listing every non-unvetted submission
+alongside its track, current review round, most recent decision (if any),
+and each reviewer's score so far. Narrow the table down with the **track**
+and **decision status** (no decision yet / accepted / rejected / resubmit /
+waitlisted) filters above it.
+
+Record a decision one submission at a time using the dropdown and **Save
+decision** button on its row, or handle several at once: tick the
+checkboxes for the rows you want (or the header checkbox to select every
+row currently shown), choose **Accept**, **Reject**, **Waitlist**, or
+**Resubmit** from the toolbar above the table, and click to apply it. A
+confirmation dialog names the decision and how many submissions it's about
+to affect before anything is saved. If you choose blind review (see below),
+reviewer feedback shown to the presenter never reveals the reviewer's
+identity.
 
 A **Resubmit** decision sends the presenter back to their submission (in
 Conference Submissions) with your feedback attached, so they can revise and
-you can re-review.
+you can re-review. Once at least one submission has a Resubmit decision, a
+**Start a new round** link appears above the table — follow it to jump
+straight to **Assign reviewers**, already filtered to every resubmitted
+submission waiting on a reviewer for its new round (see "Assigning
+reviewers" above), instead of chasing each one down individually.
 
 ### Switching to Display phase
 
