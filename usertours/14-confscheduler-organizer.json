@@ -71,7 +71,7 @@
         },
         {
             "title": "<span lang=\"en\" class=\"multilang\">Quick controls</span><span lang=\"ja\" class=\"multilang\">クイックコントロール</span>",
-            "content": "<p><span lang=\"en\" class=\"multilang\">The grid toolbar adjusts the <strong>minimum gap</strong> between talks (SnapGap), the <strong>row height</strong>, and the daily <strong>display window</strong> — live, without leaving the grid. Talks placed on a speaker's non-preferred day, and rooms whose favourites exceed capacity, are highlighted for you.</span><span lang=\"ja\" class=\"multilang\">グリッドのツールバーで、発表間の<strong>最小間隔</strong>（SnapGap）、<strong>行の高さ</strong>、1日の<strong>表示時間帯</strong>を、グリッドを離れずにその場で調整できます。発表者の希望外の日に配置された発表や、お気に入り数が定員を超えた会場は、強調表示されます。</span></p>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">The grid toolbar adjusts the <strong>minimum gap</strong> between talks (SnapGap), the <strong>row height</strong>, and the daily <strong>display window</strong> — live, without leaving the grid. The display window is set per day: pick a day (or <strong>All days</strong> for the default) and set its start/end, since days often run to different hours. Talks placed on a speaker's non-preferred day, and rooms whose favourites exceed capacity, are highlighted for you.</span><span lang=\"ja\" class=\"multilang\">グリッドのツールバーで、発表間の<strong>最小間隔</strong>（SnapGap）、<strong>行の高さ</strong>、1日の<strong>表示時間帯</strong>を、グリッドを離れずにその場で調整できます。表示時間帯は日ごとに設定します。日程を選び（既定は<strong>すべての日</strong>）、その開始・終了を設定します。開催日ごとに時間が異なることはよくあるためです。発表者の希望外の日に配置された発表や、お気に入り数が定員を超えた会場は、強調表示されます。</span></p>",
             "contentformat": "1",
             "targettype": "0",
             "targetvalue": ".mod_confscheduler-toolbar",

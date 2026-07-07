@@ -153,12 +153,22 @@ By default, the schedule grid sizes its visible time range from whatever's
 actually scheduled that day. If you'd rather it always show a fixed daily
 window — say 08:00 to 18:00, even before anything's been scheduled yet —
 uncheck **Automatic** next to the row height control and set **Day start**
-and **Day end**. If something ends up scheduled outside that window (an
-early setup session, say), it's still shown in full — the grid quietly
-widens just enough to fit it — with the out-of-window portion greyed the
-same way times outside your conference's start/end dates already are, so
-it's clear at a glance that it's outside the normal day. Re-check
-**Automatic** at any time to go back to the original behaviour.
+and **Day end**.
+
+**The window applies to whichever day the day selector is showing** — and
+conference days often run to different hours, so you can set each one
+separately. Pick a specific day and its window applies to just that day;
+pick **All days** and you're setting the default used by every day that
+doesn't have its own window. A label next to the control (**Applies to: …**)
+always shows which one you're editing. For a specific day, leaving
+**Automatic** checked means "no special window — use the All days default";
+setting a window there overrides it for that day only.
+
+If something ends up scheduled outside a day's window (an early setup
+session, say), it's still shown in full — the grid quietly widens just
+enough to fit it — with the out-of-window portion greyed the same way times
+outside your conference's start/end dates already are, so it's clear at a
+glance that it's outside the normal day.
 
 ### Span blocks (plenaries, lunch, breaks)
 
