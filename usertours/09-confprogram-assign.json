@@ -1,0 +1,43 @@
+{
+    "name": "Conference Program: Assign reviewers",
+    "description": "Conference Program: Assign reviewers",
+    "pathmatch": "/mod/confprogram/assign.php%",
+    "enabled": "1",
+    "sortorder": "17",
+    "endtourlabel": null,
+    "configdata": "{\"filtervalues\":{\"role\":[\"editingteacher\"]}}",
+    "displaystepnumbers": true,
+    "version": "2026042000",
+    "steps": [
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Assign reviewers</span><span lang=\"ja\" class=\"multilang\">査読者の割り当て</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Before anyone can review, assign reviewers to submissions here. Reviewers stay assigned across resubmission rounds. This screen is only active in Review phase.</span><span lang=\"ja\" class=\"multilang\">査読を始める前に、ここで応募に査読者を割り当てます。査読者は再提出のラウンドをまたいで割り当てられたままになります。この画面は審査フェーズでのみ有効です。</span></p>",
+            "contentformat": "1",
+            "targettype": "2",
+            "targetvalue": "",
+            "sortorder": "0",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Filter by track</span><span lang=\"ja\" class=\"multilang\">トラックで絞り込む</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Narrow the list to one track, so you can send all of a track's submissions to the right reviewers in one pass.</span><span lang=\"ja\" class=\"multilang\">一覧を1つのトラックに絞り込み、そのトラックの応募をまとめて適切な査読者に割り当てられます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "select[name=\"trackid\"]",
+            "sortorder": "1",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Individual or group</span><span lang=\"ja\" class=\"multilang\">個別またはグループ</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Each row assigns one reviewer. With group-review mode on, tick several rows and assign a whole reviewer group at once. Arriving from the Decision report's <em>Start a new round</em> link lands you here pre-filtered to every resubmitted talk.</span><span lang=\"ja\" class=\"multilang\">各行で1人の査読者を割り当てます。グループ査読モードがオンの場合は、複数の行にチェックを入れて査読者グループを一括で割り当てられます。判定レポートの<em>新しいラウンドを開始</em>リンクから来ると、再提出されたすべての発表で絞り込まれた状態でここに移動します。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": ".generaltable",
+            "sortorder": "2",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        }
+    ]
+}

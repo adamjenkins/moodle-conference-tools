@@ -1,0 +1,33 @@
+{
+    "name": "Conference Check-in: Promo codes",
+    "description": "Conference Check-in: Promo codes",
+    "pathmatch": "/mod/confcheckin/promocodes.php%",
+    "enabled": "1",
+    "sortorder": "24",
+    "endtourlabel": null,
+    "configdata": "{\"filtervalues\":{\"role\":[\"editingteacher\"]}}",
+    "displaystepnumbers": true,
+    "version": "2026042000",
+    "steps": [
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Promo codes</span><span lang=\"ja\" class=\"multilang\">プロモーションコード</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">A promo code lets someone claim a specific ticket type for free, bypassing purchase eligibility — the way to hand a particular person a ticket.</span><span lang=\"ja\" class=\"multilang\">プロモーションコードを使うと、特定のチケット種別を無料で取得でき、購入資格のチェックを回避できます。特定の人にチケットを渡す手段です。</span></p>",
+            "contentformat": "1",
+            "targettype": "2",
+            "targetvalue": "",
+            "sortorder": "0",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Which ticket, how many uses</span><span lang=\"ja\" class=\"multilang\">対象チケットと使用回数</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Choose which ticket type the code grants, and optionally cap the number of redemptions and set an expiry date.</span><span lang=\"ja\" class=\"multilang\">コードが付与するチケット種別を選び、任意で引き換え回数の上限と有効期限を設定します。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "#id_tickettypeid",
+            "sortorder": "1",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        }
+    ]
+}

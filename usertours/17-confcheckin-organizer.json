@@ -10,12 +10,22 @@
     "version": "2026042000",
     "steps": [
         {
+            "title": "<span lang=\"en\" class=\"multilang\">Tip: take this tour more than once</span><span lang=\"ja\" class=\"multilang\">ヒント：このツアーは複数回ご覧ください</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">The controls this tour points at change with how you are viewing the activity, so run it a few times to see everything. Try it with <strong>Edit mode</strong> on and off, and log in as a student to see the <strong>participant</strong> tour attendees get. A step whose control is not on screen right now is simply skipped, so nothing is wrong if the tour is short on a given visit.</span><span lang=\"ja\" class=\"multilang\">このツアーが示すコントロールは、アクティビティの表示状態によって変わります。すべてを確認するには数回ご覧ください。<strong>編集モード</strong>のオン／オフの両方で試し、学生としてログインして参加者が見る<strong>参加者向け</strong>ツアーも確認しましょう。対象のコントロールが今画面にないステップは単にスキップされるため、その回にツアーが短くても問題ありません。</span></p>",
+            "contentformat": "1",
+            "targettype": "2",
+            "targetvalue": "",
+            "sortorder": "0",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
             "title": "<span lang=\"en\" class=\"multilang\">Tickets, badges, and check-in</span><span lang=\"ja\" class=\"multilang\">チケット・バッジ・チェックイン</span>",
             "content": "<p><span lang=\"en\" class=\"multilang\">This is <strong>Conference Check-in</strong>, where you configure ticket types, sell/issue tickets, and check attendees in with a QR scanner on the day.</span><span lang=\"ja\" class=\"multilang\">これは<strong>Conference Check-in</strong>です。チケット種別の設定、チケットの販売・発行、そして当日の QR コードスキャナーによる参加者のチェックインを行います。</span></p>",
             "contentformat": "1",
             "targettype": "0",
             "targetvalue": "[data-region=\"activity-information\"]",
-            "sortorder": "0",
+            "sortorder": "1",
             "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
             "files": []
         },
@@ -25,7 +35,7 @@
             "contentformat": "1",
             "targettype": "0",
             "targetvalue": "a[href*=\"tickettypes.php\"]",
-            "sortorder": "1",
+            "sortorder": "2",
             "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
             "files": []
         },
@@ -35,7 +45,7 @@
             "contentformat": "1",
             "targettype": "0",
             "targetvalue": "a[href*=\"templates.php\"]",
-            "sortorder": "2",
+            "sortorder": "3",
             "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
             "files": []
         },
@@ -45,7 +55,7 @@
             "contentformat": "1",
             "targettype": "0",
             "targetvalue": "a[href*=\"tickettypes.php\"]",
-            "sortorder": "3",
+            "sortorder": "4",
             "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
             "files": []
         },
@@ -55,7 +65,7 @@
             "contentformat": "1",
             "targettype": "0",
             "targetvalue": "a[href*=\"promocodes.php\"]",
-            "sortorder": "4",
+            "sortorder": "5",
             "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
             "files": []
         },
@@ -65,7 +75,7 @@
             "contentformat": "1",
             "targettype": "0",
             "targetvalue": "a[href*=\"badges.php\"]",
-            "sortorder": "5",
+            "sortorder": "6",
             "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
             "files": []
         }

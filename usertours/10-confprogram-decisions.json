@@ -1,0 +1,43 @@
+{
+    "name": "Conference Program: Decision report",
+    "description": "Conference Program: Decision report",
+    "pathmatch": "/mod/confprogram/decisions.php%",
+    "enabled": "1",
+    "sortorder": "18",
+    "endtourlabel": null,
+    "configdata": "{\"filtervalues\":{\"role\":[\"editingteacher\"]}}",
+    "displaystepnumbers": true,
+    "version": "2026042000",
+    "steps": [
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">The Decision report</span><span lang=\"ja\" class=\"multilang\">判定レポート</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Every non-unvetted submission with its track, round, latest decision, and each reviewer's score. Filter by track or by decision status above the table.</span><span lang=\"ja\" class=\"multilang\">査読対象外を除くすべての応募を、トラック・ラウンド・最新の判定・各査読者のスコアとともに表示します。表の上でトラックや判定ステータスによって絞り込めます。</span></p>",
+            "contentformat": "1",
+            "targettype": "2",
+            "targetvalue": "",
+            "sortorder": "0",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Decide in bulk</span><span lang=\"ja\" class=\"multilang\">一括で判定する</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Tick the rows you want (or the header checkbox to select all shown), choose Accept / Reject / Resubmit / Waitlist here, and apply it to the whole selection at once. A confirmation names the decision and how many it affects.</span><span lang=\"ja\" class=\"multilang\">対象の行にチェックを入れ（またはヘッダーのチェックボックスで表示中すべてを選択）、ここで 採択／却下／再提出／補欠 を選び、選択したすべてに一括で適用します。確認ダイアログに判定内容と対象件数が表示されます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": ".mod_confprogram-bulk-toolbar",
+            "sortorder": "1",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Fix a submission inline</span><span lang=\"ja\" class=\"multilang\">応募をその場で修正</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">If you can edit submissions, each title has an <strong>Edit</strong> link into Conference Submissions — correct a track or any other detail without leaving the review workflow.</span><span lang=\"ja\" class=\"multilang\">応募を編集できる場合、各タイトルに Conference Submissions への<strong>編集</strong>リンクが表示されます。査読作業を離れずにトラックなどの詳細を修正できます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "a[href*=\"edit.php\"]",
+            "sortorder": "2",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        }
+    ]
+}

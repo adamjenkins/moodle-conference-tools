@@ -1,0 +1,43 @@
+{
+    "name": "Conference Submissions: Notifications",
+    "description": "Conference Submissions: Notifications",
+    "pathmatch": "/mod/confsubmissions/notifications.php%",
+    "enabled": "1",
+    "sortorder": "16",
+    "endtourlabel": null,
+    "configdata": "{\"filtervalues\":{\"role\":[\"editingteacher\"]}}",
+    "displaystepnumbers": true,
+    "version": "2026042000",
+    "steps": [
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Notification templates</span><span lang=\"ja\" class=\"multilang\">通知テンプレート</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Customise the emails sent when a submission is made (to its speakers) or withdrawn (to editing teachers). Use the tabs to switch between the two types.</span><span lang=\"ja\" class=\"multilang\">応募時（発表者宛）や取り下げ時（編集教師宛）に送られるメールをカスタマイズできます。タブで2種類を切り替えます。</span></p>",
+            "contentformat": "1",
+            "targettype": "2",
+            "targetvalue": "",
+            "sortorder": "0",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Subject and placeholders</span><span lang=\"ja\" class=\"multilang\">件名とプレースホルダー</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Write your own subject and body. Placeholders like <strong>[[fullname]]</strong> and <strong>[[submissiontitle]]</strong> are filled in per recipient — the available list is shown on the page. Leave a field blank to fall back to the built-in default.</span><span lang=\"ja\" class=\"multilang\">独自の件名と本文を記述します。<strong>[[fullname]]</strong> や <strong>[[submissiontitle]]</strong> などのプレースホルダーは宛先ごとに置き換えられます（使用可能な一覧はページに表示されます）。空欄にすると、組み込みの既定値が使われます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "#id_subject",
+            "sortorder": "1",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Master switch</span><span lang=\"ja\" class=\"multilang\">一括スイッチ</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Untick this to switch off every notification for this activity, if you would rather contact presenters yourself.</span><span lang=\"ja\" class=\"multilang\">このアクティビティのすべての通知をオフにするには、これのチェックを外します。応募者へのご自身での連絡を優先したい場合に便利です。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "#id_notificationsenabled",
+            "sortorder": "2",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        }
+    ]
+}

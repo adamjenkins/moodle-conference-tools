@@ -1,0 +1,33 @@
+{
+    "name": "Conference Scheduler: Notifications",
+    "description": "Conference Scheduler: Notifications",
+    "pathmatch": "/mod/confscheduler/notifications.php%",
+    "enabled": "1",
+    "sortorder": "22",
+    "endtourlabel": null,
+    "configdata": "{\"filtervalues\":{\"role\":[\"editingteacher\"]}}",
+    "displaystepnumbers": true,
+    "version": "2026042000",
+    "steps": [
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Schedule-change emails</span><span lang=\"ja\" class=\"multilang\">スケジュール変更メール</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">This is the email presenters receive when you press <strong>Send notifications</strong> on the grid. Scheduling emails are never sent automatically — only when you choose to, and never re-sent to an unchanged talk.</span><span lang=\"ja\" class=\"multilang\">これは、グリッドで<strong>通知を送信</strong>を押したときに発表者が受け取るメールです。スケジュールのメールは自動送信されません。送信するのはあなたが選んだときだけで、変更のない発表に再送されることはありません。</span></p>",
+            "contentformat": "1",
+            "targettype": "2",
+            "targetvalue": "",
+            "sortorder": "0",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Customise and switch off</span><span lang=\"ja\" class=\"multilang\">カスタマイズとオフ設定</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Edit the subject and body, with placeholders filled in per presenter. Untick the master switch to disable schedule notifications for this activity entirely.</span><span lang=\"ja\" class=\"multilang\">件名と本文を編集できます。プレースホルダーは発表者ごとに置き換えられます。一括スイッチのチェックを外すと、このアクティビティのスケジュール通知を完全に無効化できます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "#id_subject",
+            "sortorder": "1",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        }
+    ]
+}

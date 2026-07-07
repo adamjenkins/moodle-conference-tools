@@ -1,0 +1,33 @@
+{
+    "name": "Conference Program: Unvetted submissions",
+    "description": "Conference Program: Unvetted submissions",
+    "pathmatch": "/mod/confprogram/unvetted.php%",
+    "enabled": "1",
+    "sortorder": "21",
+    "endtourlabel": null,
+    "configdata": "{\"filtervalues\":{\"role\":[\"editingteacher\"]}}",
+    "displaystepnumbers": true,
+    "version": "2026042000",
+    "steps": [
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Skipping review</span><span lang=\"ja\" class=\"multilang\">査読をスキップする</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Invited keynotes and panels don't need peer review. Mark them <strong>unvetted</strong> to hide them from reviewers; you can still Accept them directly, and un-mark them later.</span><span lang=\"ja\" class=\"multilang\">招待講演やパネルはピアレビューを必要としません。<strong>査読対象外</strong>に設定すると査読者から隠されます。直接採択することもでき、後で設定を解除できます。</span></p>",
+            "contentformat": "1",
+            "targettype": "2",
+            "targetvalue": "",
+            "sortorder": "0",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Toggle per submission</span><span lang=\"ja\" class=\"multilang\">応募ごとに切り替え</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Mark or un-mark each submission here. Unvetted ones are excluded from the review queue and the Decision report.</span><span lang=\"ja\" class=\"multilang\">ここで各応募を設定・解除します。査読対象外の応募は、査読キューと判定レポートから除外されます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": ".generaltable",
+            "sortorder": "1",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        }
+    ]
+}

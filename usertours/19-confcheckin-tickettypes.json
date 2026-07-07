@@ -1,0 +1,43 @@
+{
+    "name": "Conference Check-in: Ticket types",
+    "description": "Conference Check-in: Ticket types",
+    "pathmatch": "/mod/confcheckin/tickettypes.php%",
+    "enabled": "1",
+    "sortorder": "23",
+    "endtourlabel": null,
+    "configdata": "{\"filtervalues\":{\"role\":[\"editingteacher\"]}}",
+    "displaystepnumbers": true,
+    "version": "2026042000",
+    "steps": [
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Ticket types</span><span lang=\"ja\" class=\"multilang\">チケット種別</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Define as many ticket types as you need — 1-day, 3-day, student, presenter, and so on. Each is bought or claimed independently.</span><span lang=\"ja\" class=\"multilang\">必要な数だけチケット種別を定義できます（1日券、3日券、学生、発表者など）。各種別は個別に購入または取得されます。</span></p>",
+            "contentformat": "1",
+            "targettype": "2",
+            "targetvalue": "",
+            "sortorder": "0",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Price and capacity</span><span lang=\"ja\" class=\"multilang\">価格と定員</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Set a price (0 for free), currency, and an optional capacity. A priced type goes through Moodle's payment; a free type is issued directly.</span><span lang=\"ja\" class=\"multilang\">価格（0 で無料）、通貨、任意の定員を設定します。有料の種別は Moodle の決済を通じ、無料の種別は直接発行されます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "#id_price",
+            "sortorder": "1",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Restrictions and auto-grant</span><span lang=\"ja\" class=\"multilang\">制限と自動付与</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">A type can be <em>presenter only</em>, gated on a group or enrolment, or auto-granted on joining a group. Auto-granted tickets that no longer apply show in the <strong>Orphaned tickets</strong> report.</span><span lang=\"ja\" class=\"multilang\">種別は<em>発表者限定</em>にしたり、グループや登録でゲートしたり、グループ参加時に自動付与したりできます。該当しなくなった自動付与チケットは<strong>孤立チケット</strong>レポートに表示されます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "a[href*=\"orphanedtickets.php\"]",
+            "sortorder": "2",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        }
+    ]
+}

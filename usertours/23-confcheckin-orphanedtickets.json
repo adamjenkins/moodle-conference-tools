@@ -1,0 +1,23 @@
+{
+    "name": "Conference Check-in: Orphaned tickets",
+    "description": "Conference Check-in: Orphaned tickets",
+    "pathmatch": "/mod/confcheckin/orphanedtickets.php%",
+    "enabled": "1",
+    "sortorder": "27",
+    "endtourlabel": null,
+    "configdata": "{\"filtervalues\":{\"role\":[\"editingteacher\"]}}",
+    "displaystepnumbers": true,
+    "version": "2026042000",
+    "steps": [
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Orphaned tickets</span><span lang=\"ja\" class=\"multilang\">孤立チケット</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">When a ticket was auto-granted from a group or enrolment the holder is no longer part of, it shows here. Tickets are never revoked automatically — you review this list and revoke each one deliberately.</span><span lang=\"ja\" class=\"multilang\">グループや登録から自動付与されたチケットのうち、保有者がそのグループ／登録に該当しなくなったものがここに表示されます。チケットが自動で取り消されることはありません。この一覧を確認し、1件ずつ意図的に取り消します。</span></p>",
+            "contentformat": "1",
+            "targettype": "2",
+            "targetvalue": "",
+            "sortorder": "0",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        }
+    ]
+}

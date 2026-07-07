@@ -1,0 +1,33 @@
+{
+    "name": "Conference Program: My review queue",
+    "description": "Conference Program: My review queue",
+    "pathmatch": "/mod/confprogram/review.php%",
+    "enabled": "1",
+    "sortorder": "19",
+    "endtourlabel": null,
+    "configdata": "{\"filtervalues\":{\"role\":[\"editingteacher\"]}}",
+    "displaystepnumbers": true,
+    "version": "2026042000",
+    "steps": [
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Your review queue</span><span lang=\"ja\" class=\"multilang\">あなたの査読キュー</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">The submissions assigned to you, split into <strong>pending</strong> and <strong>completed</strong>. Only the submissions you were assigned appear here.</span><span lang=\"ja\" class=\"multilang\">あなたに割り当てられた応募を、<strong>未対応</strong>と<strong>完了</strong>に分けて表示します。ここに表示されるのは、あなたに割り当てられた応募だけです。</span></p>",
+            "contentformat": "1",
+            "targettype": "2",
+            "targetvalue": "",
+            "sortorder": "0",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Scoring a submission</span><span lang=\"ja\" class=\"multilang\">応募を採点する</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Open a pending submission to read it and score it against the rubric. If the round is blind, author and reviewer identities stay hidden. You can re-open a completed review to edit it.</span><span lang=\"ja\" class=\"multilang\">未対応の応募を開いて内容を読み、ルーブリックに沿って採点します。ブラインドのラウンドでは、著者と査読者の氏名は非表示のままです。完了した査読を再度開いて編集することもできます。</span></p>",
+            "contentformat": "1",
+            "targettype": "2",
+            "targetvalue": "",
+            "sortorder": "1",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "name": "Conference Program: Display field settings",
+    "description": "Conference Program: Display field settings",
+    "pathmatch": "/mod/confprogram/displaysettings.php%",
+    "enabled": "1",
+    "sortorder": "20",
+    "endtourlabel": null,
+    "configdata": "{\"filtervalues\":{\"role\":[\"editingteacher\"]}}",
+    "displaystepnumbers": true,
+    "version": "2026042000",
+    "steps": [
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">What attendees see</span><span lang=\"ja\" class=\"multilang\">参加者に表示する項目</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Choose which fields appear in the public accepted-submissions list and in each talk's detail modal, once you switch to Display phase. Set this up before you go live.</span><span lang=\"ja\" class=\"multilang\">表示フェーズに切り替えた後、公開される採択応募一覧と各発表の詳細モーダルに表示するフィールドを選びます。公開前に設定しておきましょう。</span></p>",
+            "contentformat": "1",
+            "targettype": "2",
+            "targetvalue": "",
+            "sortorder": "0",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">List vs modal</span><span lang=\"ja\" class=\"multilang\">一覧とモーダル</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Each available field has a <strong>show in list</strong> and a <strong>show in modal</strong> checkbox — keep the list compact and put the detail in the modal.</span><span lang=\"ja\" class=\"multilang\">各フィールドには<strong>一覧に表示</strong>と<strong>モーダルに表示</strong>のチェックボックスがあります。一覧はすっきりさせ、詳細はモーダルに入れましょう。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": ".generaltable",
+            "sortorder": "1",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        }
+    ]
+}

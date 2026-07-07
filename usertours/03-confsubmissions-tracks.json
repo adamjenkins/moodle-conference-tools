@@ -1,0 +1,43 @@
+{
+    "name": "Conference Submissions: Manage tracks",
+    "description": "Conference Submissions: Manage tracks",
+    "pathmatch": "/mod/confsubmissions/tracks.php%",
+    "enabled": "1",
+    "sortorder": "13",
+    "endtourlabel": null,
+    "configdata": "{\"filtervalues\":{\"role\":[\"editingteacher\"]}}",
+    "displaystepnumbers": true,
+    "version": "2026042000",
+    "steps": [
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Tracks</span><span lang=\"ja\" class=\"multilang\">トラック</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Tracks group submissions by topic (for example Security, Beginner, Case studies). They drive reviewer assignment, scheduling, and the coloured pills shown across the whole suite.</span><span lang=\"ja\" class=\"multilang\">トラックは応募をテーマ（例: セキュリティ、初心者向け、事例紹介）でグループ化します。査読者の割り当て、スケジュール、スイート全体で表示される色付きピルに使われます。</span></p>",
+            "contentformat": "1",
+            "targettype": "2",
+            "targetvalue": "",
+            "sortorder": "0",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Name your track</span><span lang=\"ja\" class=\"multilang\">トラック名</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Give the track a clear, short name. Presenters pick from these when they submit.</span><span lang=\"ja\" class=\"multilang\">分かりやすく短い名前を付けます。応募者は提出時にこの一覧から選びます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "#id_name",
+            "sortorder": "1",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Colour and icon</span><span lang=\"ja\" class=\"multilang\">色とアイコン</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Pick a colour and an icon. These are not just decoration here: they become the track's coloured pill in Conference Program and Conference Scheduler, so keep several tracks visually distinct.</span><span lang=\"ja\" class=\"multilang\">色とアイコンを選びます。ここでの設定は装飾だけではありません。Conference Program や Conference Scheduler でトラックの色付きピルになるため、複数のトラックは見分けやすい色にしましょう。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "#id_colour",
+            "sortorder": "2",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        }
+    ]
+}

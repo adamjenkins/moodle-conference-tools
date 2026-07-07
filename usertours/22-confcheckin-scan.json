@@ -1,0 +1,33 @@
+{
+    "name": "Conference Check-in: QR scanner",
+    "description": "Conference Check-in: QR scanner",
+    "pathmatch": "/mod/confcheckin/scan.php%",
+    "enabled": "1",
+    "sortorder": "26",
+    "endtourlabel": null,
+    "configdata": "{\"filtervalues\":{\"role\":[\"editingteacher\"]}}",
+    "displaystepnumbers": true,
+    "version": "2026042000",
+    "steps": [
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">The check-in desk</span><span lang=\"ja\" class=\"multilang\">受付デスク</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Open this on the day to record attendees. Any USB or Bluetooth barcode scanner works out of the box, and a camera option appears where the browser supports it.</span><span lang=\"ja\" class=\"multilang\">当日にこれを開いて参加者を記録します。USB／Bluetooth のバーコードスキャナーがそのまま使え、対応ブラウザではカメラのオプションも表示されます。</span></p>",
+            "contentformat": "1",
+            "targettype": "2",
+            "targetvalue": "",
+            "sortorder": "0",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Scan a badge</span><span lang=\"ja\" class=\"multilang\">名札をスキャン</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">The field stays focused; scanning a badge (or typing its code and pressing Enter) records the check-in immediately. A repeat scan says <em>already checked in</em>, and a badge from another event is rejected.</span><span lang=\"ja\" class=\"multilang\">この欄は常にフォーカスされています。名札をスキャンする（またはコードを入力して Enter を押す）と、すぐにチェックインが記録されます。再スキャンでは<em>既にチェックイン済み</em>と表示され、別イベントの名札は拒否されます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "#mod_confcheckin-scanner-input",
+            "sortorder": "1",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        }
+    ]
+}

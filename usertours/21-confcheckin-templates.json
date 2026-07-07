@@ -1,0 +1,33 @@
+{
+    "name": "Conference Check-in: Document templates",
+    "description": "Conference Check-in: Document templates",
+    "pathmatch": "/mod/confcheckin/templates.php%",
+    "enabled": "1",
+    "sortorder": "25",
+    "endtourlabel": null,
+    "configdata": "{\"filtervalues\":{\"role\":[\"editingteacher\"]}}",
+    "displaystepnumbers": true,
+    "version": "2026042000",
+    "steps": [
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Badge, ticket, receipt, certificate</span><span lang=\"ja\" class=\"multilang\">バッジ・チケット・領収書・修了証</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Design the four PDF documents this activity produces. Use the tabs to switch between them; each is edited in the rich-text editor below.</span><span lang=\"ja\" class=\"multilang\">このアクティビティが生成する4種類の PDF 文書をデザインします。タブで切り替え、それぞれ下のリッチテキストエディターで編集します。</span></p>",
+            "contentformat": "1",
+            "targettype": "2",
+            "targetvalue": "",
+            "sortorder": "0",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Placeholders and presenter info</span><span lang=\"ja\" class=\"multilang\">プレースホルダーと発表情報</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Drop in placeholders like <strong>[[fullname]]</strong> (the list is shown on the page), and set the per-presentation format used by <strong>[[presentationinfo]]</strong> to list every talk a presenter is giving.</span><span lang=\"ja\" class=\"multilang\"><strong>[[fullname]]</strong> などのプレースホルダーを挿入でき（一覧はページに表示されます）、<strong>[[presentationinfo]]</strong> が発表者の全発表を列挙する際の1発表あたりの書式もここで設定します。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "#id_presentationinfoformat",
+            "sortorder": "1",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        }
+    ]
+}
