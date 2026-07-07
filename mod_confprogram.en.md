@@ -100,6 +100,13 @@ to affect before anything is saved. If you choose blind review (see below),
 reviewer feedback shown to the presenter never reveals the reviewer's
 identity.
 
+If you (or another editing teacher/manager) can edit submissions in the
+linked Conference Submissions activity, each row's title also shows an
+**Edit** link — use it to fix a submission's track or any other detail
+without leaving this report. Saving (or cancelling) brings you straight
+back to the Decision report with whatever track/decision-status filter you
+had active.
+
 A **Resubmit** decision sends the presenter back to their submission (in
 Conference Submissions) with your feedback attached, so they can revise and
 you can re-review. Once at least one submission has a Resubmit decision, a

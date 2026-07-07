@@ -150,6 +150,18 @@ deliberately cannot delete a submission (only a presenter withdrawing their
 own submission, or a manager/admin deleting it outright, can remove a
 submission from the active list).
 
+Editing teachers and managers can also **edit** any submission from this
+view — an **Edit** link appears alongside each row, opening the same form
+the original presenter used. This is useful for correcting a submission's
+track after review, fixing a typo, or making any other change on a
+presenter's behalf, even after the call for submissions has closed (editing
+on someone else's behalf is never blocked by the open/close dates above —
+only a presenter editing their own submission is). While editing another
+presenter's submission, a banner reminds you whose submission you're
+changing. The same **Edit** link also appears next to each submission on
+Conference Program's Decision report, so you can fix a track without
+leaving the review workflow.
+
 ### Notifications
 
 Presenters are automatically emailed when a submission is made (every
