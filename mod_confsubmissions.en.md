@@ -109,20 +109,18 @@ and **end** date/time. These aren't required, and don't restrict anything
 about the activity by themselves — their only purpose is to define the day
 range used by **Offer preferred dates**, a separate setting just below them.
 
-Turn on **Offer preferred dates** (only available once both conference dates
-are set) to show each presenter a checkbox for every day of your conference
-on the submission form, all checked by default. A presenter can uncheck any
-day they can't attend, and [Conference Scheduler](mod_confscheduler.en.md)'s
-autoscheduler will, by default, only ever place their presentation on one of
-their checked days (it still freely chooses the time of day) — if none of
-them have room, the submission is left unscheduled rather than placed on a
-day the presenter said they couldn't attend, though the organiser can check
-an "ignore preferred dates" option when running the autoscheduler to fall
-back to any day instead, for that one run. In the schedule's edit mode,
-switching the day selector to a specific day also hides any not-yet-
-scheduled presentation whose preferred days don't include that day, so an
-organiser doesn't accidentally drag someone onto a day they said they
-couldn't attend.
+Turn on **Offer preferred dates** (available once both conference dates are
+set) to show each presenter one checkbox per conference day on the submission
+form, all checked by default. A presenter unchecks any day they can't attend.
+
+By default, [Conference Scheduler](mod_confscheduler.en.md)'s autoscheduler
+then places their presentation only on a checked day (it still chooses the
+time of day freely). If no checked day has room, the submission is left
+unscheduled rather than moved to a day the presenter ruled out — though the
+organiser can tick **Ignore preferred dates** for a single autoscheduler run
+to fall back to any day. In the schedule's edit mode, selecting a specific
+day also hides any unscheduled presentation that didn't choose it, so you
+won't drag someone onto a day they can't attend.
 
 **Disabling specific days**: if your conference has a day nobody should be
 offered as a preference at all (for example, a day reserved entirely for a

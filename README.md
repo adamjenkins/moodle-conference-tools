@@ -43,6 +43,15 @@ A "favourite"/star marked in Conference Program and a "my timetable" star
 marked in Conference Scheduler are the same underlying state — starring a
 session in either activity is reflected in the other.
 
+## Guided tours
+
+Each activity ships with built-in **user tours** — short, in-page walkthroughs
+that point at the real controls, in English and Japanese, one for organisers
+and one for participants. They run automatically the first time someone opens
+an activity. Site administrators can import them from the ready-made exports in
+[`usertours/`](usertours/) (Site administration → Appearance → User tours →
+Import tour).
+
 ## Where to start
 
 - **Setting up a conference for the first time?** Read each manual's "For

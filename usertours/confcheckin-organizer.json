@@ -1,0 +1,73 @@
+{
+    "name": "Conference Check-in (Organizer)",
+    "description": "Conference Check-in (Organizer)",
+    "pathmatch": "/mod/confcheckin/view.php%",
+    "enabled": "1",
+    "sortorder": "8",
+    "endtourlabel": null,
+    "configdata": "{\"filtervalues\":{\"role\":[\"editingteacher\"]},\"majorupdatetime\":1783269536}",
+    "displaystepnumbers": true,
+    "version": "2026042000",
+    "steps": [
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Tickets, badges, and check-in</span><span lang=\"ja\" class=\"multilang\">チケット・バッジ・チェックイン</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">This is <strong>Conference Check-in</strong>, where you configure ticket types, sell/issue tickets, and check attendees in with a QR scanner on the day.</span><span lang=\"ja\" class=\"multilang\">これは<strong>Conference Check-in</strong>です。チケット種別の設定、チケットの販売・発行、そして当日の QR コードスキャナーによる参加者のチェックインを行います。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "[data-region=\"activity-information\"]",
+            "sortorder": "0",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Ticket types</span><span lang=\"ja\" class=\"multilang\">チケット種別</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Each ticket type has its own price, currency, capacity, and an optional <strong>presenter-only</strong> restriction. A ticket type can also be linked to a course group or enrolment method so joining automatically grants a free ticket.</span><span lang=\"ja\" class=\"multilang\">各チケット種別には、独自の価格・通貨・定員、そして任意で<strong>発表者限定</strong>の制限を設定できます。また、チケット種別をコースのグループや登録方法にリンクすることで、参加した際に自動的に無料チケットが付与されるようにもできます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "a[href*=\"tickettypes.php\"]",
+            "sortorder": "1",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Templates and the QR scanner</span><span lang=\"ja\" class=\"multilang\">テンプレートと QR スキャナー</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Design your badge/ticket/receipt/certificate layouts under <strong>Manage templates</strong>, using placeholder fields like the attendee's name or a full list of their presentations. Use <strong>Scan</strong> to record check-ins.</span><span lang=\"ja\" class=\"multilang\"><strong>テンプレート管理</strong>から、バッジ・チケット・領収書・修了証のレイアウトを、参加者名や発表内容の一覧などのプレースホルダー項目を使って設計できます。チェックインの記録には<strong>スキャン</strong>を使用します。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "a[href*=\"templates.php\"]",
+            "sortorder": "2",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Purchase eligibility</span><span lang=\"ja\" class=\"multilang\">購入資格</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Beyond the presenter-only restriction, a ticket type can also require membership of a specific course group or enrolment method before someone may purchase or claim it -- separate from the auto-grant link above, which instead issues a ticket automatically.</span><span lang=\"ja\" class=\"multilang\">発表者限定の制限に加えて、チケット種別には特定のコースグループまたは登録方法への所属を購入・取得の条件として設定できます。これは上記の自動付与リンク（参加時に自動でチケットを発行する仕組み）とは別の機能です。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "a[href*=\"tickettypes.php\"]",
+            "sortorder": "3",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Promo codes</span><span lang=\"ja\" class=\"multilang\">プロモーションコード</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Issue <strong>promo codes</strong> for free or comped tickets. Each code grants a specific ticket type, with optional usage limits and an expiry. A code bypasses purchase eligibility, so it's how you hand a particular person a ticket directly.</span><span lang=\"ja\" class=\"multilang\">無料または招待チケット用の<strong>プロモーションコード</strong>を発行できます。各コードは特定のチケット種別を付与し、使用回数の上限や有効期限を任意で設定できます。コードは購入資格チェックを回避するため、特定の人にチケットを直接渡す手段になります。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "a[href*=\"promocodes.php\"]",
+            "sortorder": "4",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Bulk badges and orphaned tickets</span><span lang=\"ja\" class=\"multilang\">バッジの一括出力と孤立チケット</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Download every attendee's <strong>badge, ticket, receipt and certificate</strong> as a single ZIP from <strong>Bulk badges</strong>. The <strong>Orphaned tickets</strong> report flags auto-granted tickets whose group or enrolment no longer applies, so you can revoke them.</span><span lang=\"ja\" class=\"multilang\"><strong>バッジの一括出力</strong>から、すべての参加者の<strong>バッジ・チケット・領収書・修了証</strong>を1つのZIPでダウンロードできます。<strong>孤立チケット</strong>レポートは、付与元のグループや登録が該当しなくなった自動付与チケットを検出するので、取り消せます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "a[href*=\"badges.php\"]",
+            "sortorder": "5",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        }
+    ]
+}

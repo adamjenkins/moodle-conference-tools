@@ -1,0 +1,53 @@
+{
+    "name": "Conference Program (Participant)",
+    "description": "Conference Program (Participant)",
+    "pathmatch": "/mod/confprogram/view.php%",
+    "enabled": "1",
+    "sortorder": "10",
+    "endtourlabel": null,
+    "configdata": "{\"filtervalues\":{\"role\":[\"student\"]},\"majorupdatetime\":1783356951}",
+    "displaystepnumbers": true,
+    "version": "2026042000",
+    "steps": [
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Browse the program</span><span lang=\"ja\" class=\"multilang\">プログラムを見る</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Once the organizers publish the program, you can browse every accepted presentation here, and filter it by track.</span><span lang=\"ja\" class=\"multilang\">主催者がプログラムを公開すると、採択されたすべての発表をここで閲覧でき、トラックによる絞り込みも可能です。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": ".mod_confprogram-list",
+            "sortorder": "0",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Open a talk for the full details</span><span lang=\"ja\" class=\"multilang\">発表の詳細を開く</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Click any talk's title to open its full details — abstract, speakers, track, and its scheduled time and room — without leaving the page.</span><span lang=\"ja\" class=\"multilang\">発表のタイトルをクリックすると、ページを離れずに、要旨・発表者・トラック・開催時刻と会場などの詳細を開けます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": ".confprogram-open-detail",
+            "sortorder": "1",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Star your favourites</span><span lang=\"ja\" class=\"multilang\">お気に入りに登録する</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Tap the <strong>star</strong> to save a talk. Your favourites become your personal timetable in Conference Scheduler, and you can export them straight to your calendar.</span><span lang=\"ja\" class=\"multilang\"><strong>星</strong>をタップすると発表を保存できます。お気に入りは Conference Scheduler で自分専用のタイムテーブルになり、カレンダーへ直接エクスポートできます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": ".confprogram-favourite-toggle",
+            "sortorder": "2",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Jump to a day or a track</span><span lang=\"ja\" class=\"multilang\">日付やトラックで絞り込む</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Use the <strong>day</strong> selector to jump to a single day or show them all at once, and filter the program down to a single track when you only care about one topic.</span><span lang=\"ja\" class=\"multilang\"><strong>日付</strong>セレクターで特定の日に移動したり、すべての日をまとめて表示したりできます。特定のトピックだけを見たいときは、プログラムを1つのトラックに絞り込めます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "#confprogram-day",
+            "sortorder": "3",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        }
+    ]
+}

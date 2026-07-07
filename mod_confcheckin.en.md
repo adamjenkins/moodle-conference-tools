@@ -215,17 +215,14 @@ paid tickets.
 ### Scanning attendees in
 
 At the event, a staff member with the check-in capability opens **Scan
-check-in** from the activity's main page (or, inside the Moodle app, the
-same screen as a mobile-friendly addon) to record attendees as they
-arrive. The scanner always offers a text field that accepts input from a
-USB or Bluetooth barcode scanner (which types the code as if typed on a
-keyboard) — just scan a badge and its check-in is recorded immediately. If
-the device's browser supports camera-based scanning, a "Scan with camera"
-button also appears, letting staff point a phone or tablet's camera
-directly at a badge instead. Re-scanning an already-checked-in badge is
-handled gracefully (shown as "already checked in") rather than creating a
-duplicate record, and a badge scanned at the wrong event is clearly
-rejected.
+check-in** from the activity's main page (also available inside the Moodle
+app). The scanner always offers a text field, so any USB or Bluetooth
+barcode scanner works out of the box — it types the code like a keyboard, and
+the check-in is recorded the moment a badge is scanned. Where the browser
+supports it, a **Scan with camera** button also appears for phone or tablet
+cameras. Re-scanning an already-checked-in badge shows "already checked in"
+rather than duplicating the record, and a badge from the wrong event is
+clearly rejected.
 
 ## For attendees
 

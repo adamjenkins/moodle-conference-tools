@@ -1,0 +1,83 @@
+{
+    "name": "Conference Program (Organizer)",
+    "description": "Conference Program (Organizer)",
+    "pathmatch": "/mod/confprogram/view.php%",
+    "enabled": "1",
+    "sortorder": "6",
+    "endtourlabel": null,
+    "configdata": "{\"filtervalues\":{\"role\":[\"editingteacher\"]},\"majorupdatetime\":1783270284}",
+    "displaystepnumbers": true,
+    "version": "2026042000",
+    "steps": [
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Reviewing submissions</span><span lang=\"ja\" class=\"multilang\">応募の審査</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">This is the <strong>Conference Program</strong> activity, where you review submissions pulled in from Conference Submissions and record a decision: <strong>accept</strong>, <strong>reject</strong>, or <strong>waitlist</strong>.</span><span lang=\"ja\" class=\"multilang\">ここは<strong>Conference Program</strong>アクティビティです。Conference Submissions から取り込まれた応募を審査し、<strong>採択</strong>・<strong>不採択</strong>・<strong>補欠</strong>の判定を記録します。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "[data-region=\"activity-information\"]",
+            "sortorder": "0",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Decisions are visible where it matters</span><span lang=\"ja\" class=\"multilang\">判定結果は関係する場所に反映されます</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">A submitter is eligible to claim a \"presenter\" ticket in Conference Check-in the moment their submission is accepted -- they do not need to wait for the program to be publicly displayed.</span><span lang=\"ja\" class=\"multilang\">応募が採択された時点で、応募者は Conference Check-in で「発表者」チケットを受け取る資格を得ます。プログラムが一般公開されるのを待つ必要はありません。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "a[href*=\"decisions.php\"]",
+            "sortorder": "1",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Assign reviewers</span><span lang=\"ja\" class=\"multilang\">査読者の割り当て</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">On <strong>Assign reviewers</strong>, give each submission one or more reviewers — individually, or a whole reviewer group at once in group-review mode. Filter by track to work through one track at a time.</span><span lang=\"ja\" class=\"multilang\"><strong>査読者の割り当て</strong>画面で、各応募に1人以上の査読者を割り当てます。個別に割り当てるほか、グループ査読モードでは査読者グループを一括で割り当てられます。トラックで絞り込めば、トラックごとに作業を進められます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "a[href*=\"assign.php\"]",
+            "sortorder": "2",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Decision notifications</span><span lang=\"ja\" class=\"multilang\">判定通知</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Once a decision is revealed in the Display phase, the submission's speakers are automatically emailed whether they were accepted, rejected, or waitlisted. Customize the template, or turn notifications off entirely, from <strong>Manage notifications</strong>.</span><span lang=\"ja\" class=\"multilang\">判定が公開フェーズで開示されると、その応募の発表者には採択・却下・補欠のいずれであるかが自動的にメールで通知されます。テンプレートのカスタマイズや通知の完全な無効化は<strong>通知の管理</strong>から行えます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "a[href*=\"decisions.php\"]",
+            "sortorder": "3",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">The review form and rounds</span><span lang=\"ja\" class=\"multilang\">審査フォームとラウンド</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Define a scoring <strong>rubric</strong> once (Manage review form) and reviewers score every submission against it. Reviewing can be <strong>blind</strong> — reviewer and author identities hidden from each other — and a <em>Resubmit</em> decision opens a fresh review round automatically.</span><span lang=\"ja\" class=\"multilang\">採点用の<strong>ルーブリック</strong>を一度定義すれば（審査フォームの管理）、査読者はそれに沿って各応募を採点します。査読は<strong>ブラインド</strong>（査読者と著者の氏名を相互に非表示）にでき、<em>再提出</em>の判定を行うと新しい査読ラウンドが自動的に始まります。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "[data-region=\"activity-information\"]",
+            "sortorder": "4",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Decisions, unvetted talks, and bulk actions</span><span lang=\"ja\" class=\"multilang\">判定・査読対象外・一括操作</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">On the <strong>Decisions</strong> report, record an Accept / Reject / Resubmit / Waitlist call per submission — one at a time, or in bulk across a checked selection. Invited keynotes or panels can be marked <strong>unvetted</strong> to skip review entirely.</span><span lang=\"ja\" class=\"multilang\"><strong>判定</strong>レポートで、応募ごとに 採択／却下／再提出／補欠 の判定を記録します。1件ずつでも、チェックした複数件を一括でも行えます。招待講演やパネルは<strong>査読対象外</strong>に設定し、査読を完全にスキップできます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "[data-region=\"activity-information\"]",
+            "sortorder": "5",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Go live: the Display phase</span><span lang=\"ja\" class=\"multilang\">公開：表示フェーズ</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Switching to the <strong>Display phase</strong> turns accepted talks into a public program, syncs decisions back to submitters, and sends any deferred decision emails. Use <strong>Display settings</strong> first to choose exactly which fields attendees see.</span><span lang=\"ja\" class=\"multilang\"><strong>表示フェーズ</strong>に切り替えると、採択された発表が公開プログラムになり、判定結果が応募者に反映され、保留されていた判定メールが送信されます。まず<strong>表示設定</strong>で、参加者に表示するフィールドを選んでおきましょう。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "[data-region=\"activity-information\"]",
+            "sortorder": "6",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        }
+    ]
+}

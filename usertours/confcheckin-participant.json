@@ -1,0 +1,53 @@
+{
+    "name": "Conference Check-in (Participant)",
+    "description": "Conference Check-in (Participant)",
+    "pathmatch": "/mod/confcheckin/view.php%",
+    "enabled": "1",
+    "sortorder": "12",
+    "endtourlabel": null,
+    "configdata": "{\"filtervalues\":{\"role\":[\"student\"]},\"majorupdatetime\":1783356960}",
+    "displaystepnumbers": true,
+    "version": "2026042000",
+    "steps": [
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Get your ticket</span><span lang=\"ja\" class=\"multilang\">チケットを取得する</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Buy or claim your ticket here. Some ticket types are free, some require a promo code, and some are paid -- presenter-only ticket types become available once your submission is accepted.</span><span lang=\"ja\" class=\"multilang\">ここからチケットを購入または取得できます。チケット種別には、無料のもの、プロモコードが必要なもの、有料のものがあります。発表者限定のチケット種別は、あなたの応募が採択されると利用可能になります。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "a[href*=\"purchase.php\"]",
+            "sortorder": "0",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Your badge and ticket</span><span lang=\"ja\" class=\"multilang\">バッジとチケット</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">After you have a ticket, download your QR-coded badge/ticket from this page -- bring it (printed or on your phone) to the venue.</span><span lang=\"ja\" class=\"multilang\">チケットを取得したら、このページから QR コード付きのバッジ・チケットをダウンロードできます。印刷するかスマートフォンに表示した状態で会場までお持ちください。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "a[href*=\"purchase.php\"]",
+            "sortorder": "1",
+            "configdata": "{\"placement\":\"right\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Checking in and your certificate</span><span lang=\"ja\" class=\"multilang\">チェックインと修了証</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Staff will scan your QR code to check you in on the day. Once checked in, you can come back here to download your attendance certificate.</span><span lang=\"ja\" class=\"multilang\">当日はスタッフがあなたの QR コードをスキャンしてチェックインを行います。チェックイン後は、このページから参加証明書（修了証）をダウンロードできます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "a[href*=\"purchase.php\"]",
+            "sortorder": "2",
+            "configdata": "{\"placement\":\"left\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Have a promo code?</span><span lang=\"ja\" class=\"multilang\">プロモーションコードをお持ちですか？</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Enter a <strong>promo code</strong> on the ticket page to claim your ticket directly — no payment needed, even for a normally paid ticket type.</span><span lang=\"ja\" class=\"multilang\">チケットページで<strong>プロモーションコード</strong>を入力すると、通常は有料のチケット種別でも、支払いなしで直接チケットを取得できます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "a[href*=\"purchase.php\"]",
+            "sortorder": "3",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        }
+    ]
+}

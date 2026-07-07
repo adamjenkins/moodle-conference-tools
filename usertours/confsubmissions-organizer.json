@@ -1,0 +1,83 @@
+{
+    "name": "Conference Submissions (Organizer)",
+    "description": "Conference Submissions (Organizer)",
+    "pathmatch": "/mod/confsubmissions/view.php%",
+    "enabled": "1",
+    "sortorder": "5",
+    "endtourlabel": null,
+    "configdata": "{\"filtervalues\":{\"role\":[\"editingteacher\"]},\"majorupdatetime\":1783336985}",
+    "displaystepnumbers": true,
+    "version": "2026042000",
+    "steps": [
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Welcome, organizer!</span><span lang=\"ja\" class=\"multilang\">ようこそ、主催者の皆様！</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">This is the <strong>Conference Submissions</strong> activity -- where you run your call for abstracts. From here you configure submission types, tracks, and deadlines, and review everything that gets submitted.</span><span lang=\"ja\" class=\"multilang\">ここは<strong>Conference Submissions</strong>（応募受付）アクティビティです。このアクティビティから、発表募集の設定（応募種別、トラック、締切）を行い、提出されたすべての応募を確認できます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "[data-region=\"activity-information\"]",
+            "sortorder": "0",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Submission types and tracks</span><span lang=\"ja\" class=\"multilang\">応募種別とトラック</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Use <strong>Submission types</strong> to define the kinds of talks you accept (e.g. \"Lightning talk\", \"Full session\"), each with its own scheduled duration. Use <strong>Tracks</strong> to group related submissions (e.g. \"Security\", \"Beginner\") -- both the scheduler and the public program use these.</span><span lang=\"ja\" class=\"multilang\"><strong>応募種別</strong>を使って、受け付ける発表の種類（例:「ライトニングトーク」「フルセッション」）を、それぞれの発表時間とともに定義します。<strong>トラック</strong>を使うと、関連する応募（例:「セキュリティ」「初心者向け」）をグループ化できます。これらはスケジューラーや公開プログラムでも使用されます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "a[href*=\"submissiontypes.php\"]",
+            "sortorder": "1",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Preferred dates</span><span lang=\"ja\" class=\"multilang\">希望日程</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Submitters can optionally record which conference days they are available to present on. The autoscheduler in Conference Scheduler treats these as a hard constraint by default when placing accepted talks.</span><span lang=\"ja\" class=\"multilang\">応募者は、発表可能なカンファレンス開催日を任意で登録できます。Conference Scheduler の自動スケジューラーは、既定の設定ではこれを厳守すべき制約として扱い、採択された発表を配置します。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "a[href*=\"dates.php\"]",
+            "sortorder": "2",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Withdrawing a submission</span><span lang=\"ja\" class=\"multilang\">応募の取り下げ</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">A submitter can withdraw their own submission at any time before a final decision. Keep an eye on withdrawn submissions if your schedule already has them placed.</span><span lang=\"ja\" class=\"multilang\">応募者は、最終決定が下される前であれば、いつでも自分の応募を取り下げることができます。すでにスケジュールに配置されている応募が取り下げられた場合は注意してください。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "a[href*=\"withdraw=\"]",
+            "sortorder": "3",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Notifications</span><span lang=\"ja\" class=\"multilang\">通知</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Speakers are automatically emailed when a submission is made, and organizers when one is withdrawn. Customize the templates, or turn notifications off entirely for this instance, from <strong>Manage notifications</strong>.</span><span lang=\"ja\" class=\"multilang\">応募が行われると発表者に、取り下げられると主催者に、自動でメールが送信されます。テンプレートのカスタマイズや、このアクティビティの通知を完全にオフにする設定は<strong>通知の管理</strong>から行えます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "a[href*=\"notifications.php\"]",
+            "sortorder": "4",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Custom fields</span><span lang=\"ja\" class=\"multilang\">カスタムフィールド</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Beyond title and abstract, add your own <strong>custom fields</strong> — a dropdown, checkbox, date, number, URL or free text — to collect exactly what your call needs (affiliation, equipment, preferred length…). Any field can be made required.</span><span lang=\"ja\" class=\"multilang\">タイトルと概要に加えて、<strong>カスタムフィールド</strong>（ドロップダウン、チェックボックス、日付、数値、URL、自由記述）を追加し、募集に必要な情報（所属、機材、希望発表時間など）を的確に集められます。任意のフィールドを必須にできます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "a[href*=\"fields.php\"]",
+            "sortorder": "5",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Review — and edit — every submission</span><span lang=\"ja\" class=\"multilang\">すべての応募を確認・編集する</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">The <strong>All submissions</strong> table lists every abstract and filters by track and status. Editing teachers can open any submission with its <strong>Edit</strong> link to correct details — including the chosen track — and managers can remove one outright.</span><span lang=\"ja\" class=\"multilang\"><strong>すべての応募</strong>一覧には、すべての要旨がトラックとステータスで絞り込める形で表示されます。編集教師は各応募の<strong>編集</strong>リンクから内容（選択されたトラックを含む）を修正でき、管理者は応募を完全に削除できます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "a[href*=\"edit.php\"]",
+            "sortorder": "6",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        }
+    ]
+}

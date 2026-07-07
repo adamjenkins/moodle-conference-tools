@@ -196,20 +196,15 @@ submissions it placed and, for any it couldn't fit anywhere in the window,
 why not.
 
 **Preferred dates**: if a presenter recorded preferred conference days
-(Conference Submissions' "offer preferred dates" feature), the
-autoscheduler by default only ever places their submission on one of those
-days. If none of them have room anywhere in the window, that submission is
-left unscheduled and reported as "could not be placed," rather than being
-placed on a day the presenter said they couldn't attend. Check **Ignore
-preferred dates** before running to change this for that one run: the
-autoscheduler will still try a preferred day first, but falls back to
-placing on any day in the window if none of the preferred ones have room,
-so nothing gets left unscheduled purely because of a preference. A
-presentation that ends up scheduled on a day its presenter did not prefer —
-whether from an ignore-preferred-dates run, or from you manually dragging
-it there — is shown with a distinct amber border and hatching while Edit
-mode is on, as a reminder; with Edit mode off, it displays exactly like any
-other block.
+(Conference Submissions' "offer preferred dates" feature), the autoscheduler
+places their submission only on one of those days by default. If none have
+room, the submission is left unscheduled and reported as "could not be
+placed," rather than moved to a day the presenter ruled out. Tick **Ignore
+preferred dates** before a run to relax this: it still tries a preferred day
+first, but falls back to any day rather than leaving the submission
+unplaced. A presentation that ends up on a non-preferred day — from such a
+run or from a manual drag — shows an amber border and hatching in Edit mode
+as a reminder (it looks like any other block once Edit mode is off).
 
 ### Notifications
 

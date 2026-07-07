@@ -1,0 +1,53 @@
+{
+    "name": "Conference Scheduler (Participant)",
+    "description": "Conference Scheduler (Participant)",
+    "pathmatch": "/mod/confscheduler/view.php%",
+    "enabled": "1",
+    "sortorder": "11",
+    "endtourlabel": null,
+    "configdata": "{\"filtervalues\":{\"role\":[\"student\"]},\"majorupdatetime\":1783356955}",
+    "displaystepnumbers": true,
+    "version": "2026042000",
+    "steps": [
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Viewing the schedule</span><span lang=\"ja\" class=\"multilang\">スケジュールを見る</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">This is the conference timetable: a room x time grid. Use the day selector to page through a multi-day conference one day at a time.</span><span lang=\"ja\" class=\"multilang\">これはカンファレンスのタイムテーブルです（会場 × 時間のグリッド形式）。複数日にわたるカンファレンスの場合は、日付選択で1日ずつ表示を切り替えられます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": ".mod_confscheduler-day-select",
+            "sortorder": "0",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">My timetable</span><span lang=\"ja\" class=\"multilang\">マイタイムテーブル</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Click the star icon on any presentation to add it to <strong>My timetable</strong> -- this highlights your favourites and greys out everything else, so you can build your own personal schedule.</span><span lang=\"ja\" class=\"multilang\">各発表のスターアイコンをクリックすると<strong>マイタイムテーブル</strong>に追加されます。お気に入りの発表が強調表示され、それ以外はグレー表示になるため、ご自身だけのスケジュールを作成できます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": ".mod_confscheduler-mytimetable-toggle",
+            "sortorder": "1",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Export your timetable</span><span lang=\"ja\" class=\"multilang\">タイムテーブルをエクスポート</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Once you've starred your favourites, click <strong>Export my timetable (.ics)</strong> to download them as a calendar file you can import into any calendar app.</span><span lang=\"ja\" class=\"multilang\">お気に入りを登録したら、<strong>マイタイムテーブルをエクスポート (.ics)</strong>をクリックすると、任意のカレンダーアプリに取り込めるカレンダーファイルとしてダウンロードできます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": "a[href*=\"export.php\"]",
+            "sortorder": "2",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Reading the grid</span><span lang=\"ja\" class=\"multilang\">グリッドの見かた</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Rooms run across the top, time down the side. Coloured blocks are talks — click one for its details. Bars that span several rooms are shared items like breaks and plenaries.</span><span lang=\"ja\" class=\"multilang\">上部に会場、左側に時間が並びます。色付きのブロックは発表で、クリックすると詳細を確認できます。複数の会場にまたがる横棒は、休憩や全体セッションなどの共有項目です。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": ".mod_confscheduler-display",
+            "sortorder": "3",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        }
+    ]
+}
