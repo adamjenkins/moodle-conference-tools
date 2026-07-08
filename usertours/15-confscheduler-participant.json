@@ -48,6 +48,16 @@
             "sortorder": "3",
             "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
             "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Poster sessions and keynote panels</span><span lang=\"ja\" class=\"multilang\">ポスターセッションと基調講演パネル</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Some span blocks hold several presentations at once -- a poster session or keynote panel. Each one appears as its own small tile inside the block; click it just like any other talk to see its details, and star it to add it to <strong>My timetable</strong> if it has one.</span><span lang=\"ja\" class=\"multilang\">一部のスパンブロックには、ポスターセッションや基調講演パネルのように複数の発表がまとめて収められています。それぞれの発表はブロック内の小さなタイルとして表示され、他の発表と同様にクリックすると詳細を確認できます。スターがあれば、それをクリックして<strong>マイタイムテーブル</strong>に追加できます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": ".mod_confscheduler-container-children",
+            "sortorder": "4",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
         }
     ]
 }

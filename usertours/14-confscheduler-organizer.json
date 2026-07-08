@@ -41,11 +41,21 @@
         },
         {
             "title": "<span lang=\"en\" class=\"multilang\">Span blocks and SnapGap</span><span lang=\"ja\" class=\"multilang\">スパンブロックと SnapGap</span>",
-            "content": "<p><span lang=\"en\" class=\"multilang\">Use <strong>Add span block</strong> for a labelled block with no presentation (lunch, a plenary) that spans several rooms. While dragging, SnapGap automatically nudges a block to the nearest valid position instead of rejecting an invalid drop.</span><span lang=\"ja\" class=\"multilang\">発表を伴わない、複数の会場にまたがるラベル付きブロック（昼食、全体会など）には<strong>スパンブロックを追加</strong>を使用します。ドラッグ中は SnapGap 機能により、無効な位置へのドロップを拒否する代わりに、自動的に最も近い有効な位置へ調整されます。</span></p>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Use <strong>Add span block</strong> for a labelled block with no presentation (lunch, a plenary) that spans several rooms. While dragging, SnapGap automatically nudges a block to the nearest valid position instead of rejecting an invalid drop. Check <strong>Container</strong> in the same form to turn it into a poster session or keynote panel that can hold several presentations at once.</span><span lang=\"ja\" class=\"multilang\">発表を伴わない、複数の会場にまたがるラベル付きブロック（昼食、全体会など）には<strong>スパンブロックを追加</strong>を使用します。ドラッグ中は SnapGap 機能により、無効な位置へのドロップを拒否する代わりに、自動的に最も近い有効な位置へ調整されます。同じフォームで<strong>Container</strong>にチェックを入れると、複数の発表をまとめて収められるポスターセッションや基調講演パネルにできます。</span></p>",
             "contentformat": "1",
             "targettype": "0",
             "targetvalue": ".mod_confscheduler-add-spanblock",
             "sortorder": "3",
+            "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
+            "files": []
+        },
+        {
+            "title": "<span lang=\"en\" class=\"multilang\">Nesting presentations in a container</span><span lang=\"ja\" class=\"multilang\">コンテナへの発表の組み込み</span>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Once a block is a container, click its <strong>+</strong> button to pick an accepted-but-unscheduled presentation and nest it inside -- it appears as a small tile with just its title and speaker(s), laid out side by side with any others. Moving or resizing the container takes every nested presentation along with it; deleting it asks first if anything is still nested inside.</span><span lang=\"ja\" class=\"multilang\">ブロックがコンテナになると、その<strong>+</strong>ボタンをクリックして、採択済みでまだ未スケジュールの発表を選び、中に組み込むことができます。タイトルと発表者名だけを表示する小さなタイルとして、他の発表と横に並んで表示されます。コンテナを移動・サイズ変更すると、組み込まれているすべての発表も一緒に移動します。削除しようとすると、何か組み込まれている場合は先に確認が求められます。</span></p>",
+            "contentformat": "1",
+            "targettype": "0",
+            "targetvalue": ".mod_confscheduler-container-add",
+            "sortorder": "4",
             "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
             "files": []
         },
@@ -55,7 +65,7 @@
             "contentformat": "1",
             "targettype": "0",
             "targetvalue": ".mod_confscheduler-room-header-edit",
-            "sortorder": "4",
+            "sortorder": "5",
             "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
             "files": []
         },
@@ -65,7 +75,7 @@
             "contentformat": "1",
             "targettype": "0",
             "targetvalue": ".mod_confscheduler-send-notifications",
-            "sortorder": "5",
+            "sortorder": "6",
             "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
             "files": []
         },
@@ -75,7 +85,7 @@
             "contentformat": "1",
             "targettype": "0",
             "targetvalue": ".mod_confscheduler-toolbar",
-            "sortorder": "6",
+            "sortorder": "7",
             "configdata": "{\"placement\":\"bottom\",\"backdrop\":true}",
             "files": []
         }
