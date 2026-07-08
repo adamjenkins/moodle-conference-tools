@@ -180,8 +180,10 @@ browse **accepted submissions**:
 
 - Use the **day selector** to jump to a specific conference day (defaults
   to today, or the first day, if the schedule spans multiple days), or
-  choose **All days** to see every day's accepted submissions listed one
-  after another, each under its own date heading.
+  choose **All days** to see every day's accepted submissions in a single
+  table with a divider row for each date, and consistent column widths
+  throughout. On a narrow screen (phone or small tablet), the table
+  collapses to a two-row-per-submission layout for easier reading.
 - Click a submission's title to open a detail popup with the full
   abstract and any extra fields the organiser chose to show.
 - Click the **star** icon to add a submission to **My favourites**, then

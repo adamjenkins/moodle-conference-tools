@@ -128,7 +128,10 @@ workshop track, or one you know most presenters can't make), open **Manage
 disabled preferred days** and check that day. A regular presenter's checkbox
 for a disabled day still appears on the submission form — so the day list
 always looks the same to everyone — but it's shown greyed out and can't be
-checked. Editing teachers and managers are not affected by this setting:
+checked. You can optionally type a short reason (e.g. "Venue unavailable")
+next to the day when disabling it; if set, that reason appears in
+parentheses beside the greyed-out day on the submission form, so presenters
+know why. Editing teachers and managers are not affected by this setting:
 they still see and can select every day, disabled or not, when submitting or
 editing on someone's behalf.
 
@@ -196,7 +199,8 @@ conference, all checked by default. Uncheck any day you can't attend — the
 autoscheduler will try to place your presentation on one of the days you
 leave checked, though this is a preference rather than a guarantee. If the
 organiser has disabled a specific day, you'll still see it in the list, but
-greyed out and not selectable.
+greyed out and not selectable — if they gave a reason, it appears in
+parentheses next to that day.
 
 ### Adding co-presenters
 
@@ -262,5 +266,6 @@ treated as "no day works for me."
 it?**
 The organiser has disabled that specific day from being offered as a
 preference — this doesn't mean you can't be scheduled on it, only that you
-can't request it as a preference. Contact the organiser if you need to be
+can't request it as a preference. If they gave a reason, it's shown in
+parentheses next to the day. Contact the organiser if you need to be
 scheduled on that day specifically.

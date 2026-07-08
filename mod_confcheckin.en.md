@@ -30,6 +30,7 @@ Badges achievement system.
   - [Changing the placeholder delimiter](#changing-the-placeholder-delimiter)
   - [Downloading badges, tickets, and receipts in bulk](#downloading-badges-tickets-and-receipts-in-bulk)
   - [Scanning attendees in](#scanning-attendees-in)
+  - [The check-in report](#the-check-in-report)
 - [For attendees](#for-attendees)
   - [Buying or claiming a ticket](#buying-or-claiming-a-ticket)
   - [Your badge and QR code](#your-badge-and-qr-code)
@@ -56,10 +57,15 @@ For each ticket type, set:
 - **Name** (e.g. "Full Conference," "Student," "Presenter," "Day 2 Only").
 - **Price and currency.** Set the price to zero for a genuinely free
   ticket type — no payment step is involved for a zero-price ticket.
+  Currency defaults to Japanese yen (JPY) for a new ticket type; change it
+  to any supported currency.
 - **Capacity** (optional) — a maximum number of this ticket type that can
   ever be issued. Leave blank for unlimited. Capacity is enforced
   correctly even if many people try to buy the last ticket at the same
   moment.
+- **Maximum per user** — how many tickets of this type a single person may
+  hold at once (default 1). Enforced across every way a ticket can be
+  issued — purchase, promo code, and auto-grant alike.
 - **Presenter only** — restrict this ticket type to users who are an
   accepted speaker on at least one submission in the linked Conference
   Program activity (see below).
@@ -220,9 +226,23 @@ app). The scanner always offers a text field, so any USB or Bluetooth
 barcode scanner works out of the box — it types the code like a keyboard, and
 the check-in is recorded the moment a badge is scanned. Where the browser
 supports it, a **Scan with camera** button also appears for phone or tablet
-cameras. Re-scanning an already-checked-in badge shows "already checked in"
-rather than duplicating the record, and a badge from the wrong event is
-clearly rejected.
+cameras. A successful camera scan flashes the preview border green, shows a
+green checkmark, and plays a short beep (mute it with the on-screen toggle
+if scanning in a quiet space). Re-scanning an already-checked-in badge shows
+"already checked in" rather than duplicating the record, and a badge from
+the wrong event is clearly rejected.
+
+### The check-in report
+
+Open **Check-in report** from the activity's main page (visible to editing
+teachers and managers only) for a sortable list of everyone enrolled in the
+course: their ticket(s), whether and when they checked in, and — separately
+called out — who holds no ticket at all and who hasn't checked in yet.
+Click any column heading to sort by it. Each row also has a manual
+**Check in** / **Remove check-in** toggle, for correcting a scan that
+didn't register or reversing one made in error, without needing the
+physical badge or QR code again. Names link through to the person's course
+profile.
 
 ## For attendees
 
