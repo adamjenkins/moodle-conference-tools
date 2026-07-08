@@ -20,6 +20,7 @@ attendees.
   - [Row height](#row-height)
   - [Day start/day end](#day-startday-end)
   - [Span blocks (plenaries, lunch, breaks)](#span-blocks-plenaries-lunch-breaks)
+  - [Container blocks (poster sessions, keynote panels)](#container-blocks-poster-sessions-keynote-panels)
   - [Running the autoscheduler](#running-the-autoscheduler)
   - [Notifications](#notifications)
 - [For attendees](#for-attendees)
@@ -182,6 +183,41 @@ Span blocks can be **edited after creation**: click an existing span block
 (with Edit mode on) to reopen the same form, pre-filled, and change its
 label, colour, time, or room range.
 
+Any span block can also have a **Displayed room name**: type your own text
+(e.g. "Exhibit Hall") and it replaces the real room name(s) shown on the
+block, both in Edit mode and on the published schedule — handy when the
+rooms it spans have technical names attendees won't recognise. Leave it
+blank to keep showing the real room name(s).
+
+### Container blocks (poster sessions, keynote panels)
+
+A span block can also be turned into a **container** — a single block that
+holds several presentations at once, for a poster session or a keynote
+panel. Check **Container** when adding or editing a span block to turn it
+into one.
+
+Once a block is a container, a **+** button appears on it. Click it to pick
+any accepted-but-unscheduled presentation and nest it inside — it appears
+as a small tile showing just the presentation's title and speaker(s). Add
+as many as you like; they lay out side by side at equal width inside the
+container.
+
+A nested presentation's own tile deliberately never shows a room or time —
+that's already shown once, on the container itself, so there's no need to
+repeat it. Clicking a nested tile still opens the presentation's full
+detail page, exactly like a normally-scheduled block.
+
+Moving or resizing the container takes every presentation nested inside it
+along for the ride — they always share the container's own time. Deleting
+a container asks you to confirm first if it still has anything nested
+inside, since removing it returns every one of those presentations to the
+**unscheduled** list on the left.
+
+Two things this doesn't do yet: you can't drag a presentation straight onto
+a container (use its **+** button instead), and there's no way to reorder
+presentations within a container — they're laid out in the order you added
+them.
+
 ### Running the autoscheduler
 
 For a large program, manually placing every block can be slow. With Edit
@@ -256,6 +292,10 @@ published, read-only schedule:
   can import into any calendar app (Google Calendar, Outlook, Apple
   Calendar, and so on).
 - Click a **track pill** to see everything else in that track.
+- A poster session or keynote panel (a container block) shows each of its
+  presentations as its own small tile inside it — click one just like any
+  other scheduled block to see its full detail, and star it to add it to
+  your timetable if it has one.
 
 ## Printing the schedule
 
