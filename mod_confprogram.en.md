@@ -109,7 +109,14 @@ had active.
 
 A **Resubmit** decision sends the presenter back to their submission (in
 Conference Submissions) with your feedback attached, so they can revise and
-you can re-review. Once at least one submission has a Resubmit decision, a
+you can re-review. Unlike Accept/Reject/Waitlist, a Resubmit notification is
+emailed **immediately** (with a link to where the presenter can see your
+feedback and resubmit) rather than waiting for Display phase — since the
+whole point is to let them act on it right away. Because it sends
+immediately, both the per-row **Save decision** button and the bulk-apply
+toolbar show a confirmation naming the decision before anything is recorded
+or sent, giving you a chance to cancel if you're not ready. Once at least
+one submission has a Resubmit decision, a
 **Start a new round** link appears above the table — follow it to jump
 straight to **Assign reviewers**, already filtered to every resubmitted
 submission waiting on a reviewer for its new round (see "Assigning
@@ -138,18 +145,38 @@ detail popup.
 
 ### Notifications
 
-Once you switch to Display phase, every submission's decision — accept,
-reject, or waitlist — is automatically emailed to its speaker(s). A decision
-recorded while still in Review phase is never emailed early; it's queued
-and sent the moment you switch to Display phase, so a presenter never learns
-their result before you're ready to publish.
+**Notifications are off by default** for a newly added instance — turn on
+**Enable notifications** (see below) if you want decisions emailed at all.
 
-Open **Manage notifications** to customise the subject/message for this
-email, or switch it off entirely for this instance with **Enable
-notifications**. Turning notifications back on later still delivers any
-decision that was recorded while they were off — nothing is lost, only
+Accept, Reject, and Waitlist decisions are never emailed automatically the
+moment you record them, and switching to Display phase no longer sends them
+either. Instead, once you're ready, click **Send pending notifications**
+(shown on this page with a live count of what's queued) to email every
+speaker whose decision hasn't been sent yet. This lets a presenter never
+learn their result before you're ready to publish, on your own schedule
+rather than tied to the phase switch. Open **Pending notifications** to see
+exactly what's queued (submission, decision, recipients, how long it's been
+waiting) and **Dismiss** any you don't want sent after all — dismissing
+never emails anyone and leaves the underlying decision itself untouched.
+Only the newest decision on a given submission is ever queued or sent, so
+e.g. a Waitlist followed later by an Accept for the same submission never
+results in two emails.
+
+A **Resubmit** decision is the one exception — it always emails
+immediately, regardless of phase (see "Recording decisions" above), and
+does not appear in the pending queue.
+
+Each decision type (**Accept**, **Reject**, **Waitlist**, **Resubmit**) has
+its own subject/message template — open **Manage notifications** and switch
+between tabs to customise each one. The built-in defaults suggest the
+typical next step for that outcome (e.g. Accept prompts the presenter to
+claim their ticket promptly; Resubmit links to where they can read your
+feedback and revise). Switch notifications off entirely for this instance
+with **Enable notifications** — turning them back on later still delivers
+any decision that was recorded while they were off — nothing is lost, only
 delayed. Placeholders available include `[[fullname]]`,
-`[[submissiontitle]]`, `[[coursename]]`, and `[[decision]]`.
+`[[submissiontitle]]`, `[[coursename]]`, `[[decision]]`, and — for the
+Resubmit template only — `[[feedbackurl]]`.
 
 ## For reviewers
 
@@ -210,8 +237,10 @@ Conference Program's list and Conference Scheduler's "my timetable"
 highlight, so you only ever need to star a session once.
 
 **When exactly does a presenter get emailed about their decision?**
-The moment the organiser switches the instance to Display phase — not when
-the decision is first recorded. If a decision was made while still in
-Review phase, it's queued and the email goes out with everyone else's the
-instant Display phase begins (unless the organiser has switched
-notifications off entirely for this instance).
+For Accept/Reject/Waitlist: whenever the organiser clicks **Send pending
+notifications** — not automatically when the decision is recorded, and not
+automatically on the phase switch either. It's queued until then (visible,
+and dismissable, on the **Pending notifications** page), unless the
+organiser has switched notifications off entirely for this instance. A
+**Resubmit** decision is different — it's always emailed immediately, since
+the whole point is to let the presenter act on your feedback right away.

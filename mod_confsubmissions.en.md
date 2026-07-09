@@ -33,10 +33,15 @@ limits, tracks, and custom fields. Submissions made here feed directly into
 2. Select **Conference Submissions**.
 3. Give it a name (e.g. "Call for Abstracts") and, optionally, a description
    shown to presenters.
-4. Under **Submission limits**, set the maximum title length and the maximum
-   abstract length. You can limit by character count, word count, or both.
-   Presenters see a live counter as they type, and the form will not submit
-   past the limit.
+4. Under **Submission limits**, set limits for the title and the abstract
+   independently: a maximum word count, a maximum character count, or
+   both at once (each is optional — leave a box at 0 for no limit on that
+   count). Setting both means either one being exceeded blocks submission,
+   which is useful for mixed English/Japanese content (e.g. a word limit
+   for English speakers and a character limit for Zenkaku Japanese text,
+   applied to the same field). Presenters see a live counter for whichever
+   limits are set as they type, and the form will not submit past any of
+   them.
 5. Under **Call dates**, set the open and close date/time for submissions.
    Presenters cannot start a new submission before the open date or after
    the close date, and cannot edit an existing submission after the close
@@ -166,11 +171,17 @@ leaving the review workflow, and on a submission's own detail page.
 
 ### Notifications
 
+**Notifications are off by default** for a newly added instance — turn on
+**Enable notifications** (see below) if you want these emails sent at all.
+
 Presenters are automatically emailed when a submission is made (every
 speaker with a Moodle account, not just the submitter), and every organiser
 who can edit any submission (editing teachers and managers by default —
 anyone holding the *Edit any submission* capability) is emailed if a
-submission is withdrawn.
+submission is withdrawn. Both of these send immediately — there is no
+pending queue to review here (unlike Conference Program/Conference
+Scheduler), since each is a one-off event rather than something that
+benefits from batching.
 
 Open **Manage notifications** to customise the subject and message body sent
 for each of these, or to switch off notifications entirely for this

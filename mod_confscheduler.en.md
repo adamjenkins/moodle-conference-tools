@@ -272,6 +272,10 @@ as a reminder (it looks like any other block once Edit mode is off).
 
 ### Notifications
 
+**Notifications are off by default** for a newly added instance — turn on
+**Enable notifications** (see below) if you want reschedules emailed at
+all.
+
 Unlike Conference Submissions and Conference Program, scheduling
 notifications here are **never automatic** — a schedule is typically
 rearranged many times while you're building it, and emailing speakers on
@@ -281,7 +285,10 @@ scheduling information has changed since they were last notified. Click it
 whenever you're ready — it emails only those speakers, skipping anyone
 whose time/room hasn't changed since the last send, so you can click it
 again later after making further changes without re-notifying speakers
-who weren't affected.
+who weren't affected. Open **Pending notifications** to see exactly which
+presentations are queued (room/time, how long they've been waiting) and
+**Dismiss** any you don't want emailed after all — dismissing just marks it
+as sent without actually emailing anyone.
 
 Open **Manage notifications** to customise the subject/message, or switch
 notifications off entirely for this instance with **Enable notifications**.
