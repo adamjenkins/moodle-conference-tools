@@ -194,13 +194,21 @@ blank to keep showing the real room name(s).
 A span block can also be turned into a **container** — a single block that
 holds several presentations at once, for a poster session or a keynote
 panel. Check **Container** when adding or editing a span block to turn it
-into one.
+into one. Two more dropdowns appear alongside it — **Text alignment
+(horizontal)** and **Text alignment (vertical)** — controlling how the
+title/speaker text sits inside every nested tile in this container (left,
+centre, or right; top, middle, or bottom). This is a single setting for the
+whole container, not something you set per presentation.
 
-Once a block is a container, a **+** button appears on it. Click it to pick
-any accepted-but-unscheduled presentation and nest it inside — it appears
-as a small tile showing just the presentation's title and speaker(s). Add
-as many as you like; they lay out side by side at equal width inside the
-container.
+Once a block is a container, a **+** button appears on it. Click it to open
+a picker listing every accepted-but-unscheduled presentation, each with its
+own checkbox — tick as many as you like and click Save to nest them all in
+one go, instead of adding them one at a time. Two dropdowns above the list,
+**Filter by track** and **Filter by type**, narrow it down first if there
+are a lot of presentations to choose from; set either back to "All" to see
+everything again. Once nested, each presentation appears as a small tile
+showing its title, speaker(s), and a track pill if it has one; they lay out
+side by side at equal width inside the container.
 
 A nested presentation's own tile deliberately never shows a room or time —
 that's already shown once, on the container itself, so there's no need to
@@ -281,8 +289,8 @@ published, read-only schedule:
 
 - Use the **day selector** to view one day at a time, or choose **All
   days** to see every day's schedule, one table per day, on the same page.
-- Click a scheduled block to open the presentation's detail page in
-  Conference Program.
+- Click anywhere on a scheduled block — not just its title — to open the
+  presentation's detail page in Conference Program.
 - Click the **star** to add a session to **My timetable**, then use the
   **My timetable** toggle to highlight your favourites and grey out
   everything else — handy for finding your own sessions at a glance in a
