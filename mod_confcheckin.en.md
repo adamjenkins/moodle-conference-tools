@@ -58,21 +58,33 @@ For each ticket type, set:
 - **Price and currency.** Set the price to zero for a genuinely free
   ticket type — no payment step is involved for a zero-price ticket.
   Currency defaults to Japanese yen (JPY) for a new ticket type; change it
-  to any supported currency.
+  to any supported currency. A currency that doesn't use decimal places
+  (JPY, KRW, and similar) only accepts whole-number prices — payment
+  gateways reject fractional amounts in them, so the form catches this
+  before it can trip up your buyers at checkout.
 - **Capacity** (optional) — a maximum number of this ticket type that can
   ever be issued. Leave blank for unlimited. Capacity is enforced
   correctly even if many people try to buy the last ticket at the same
   moment.
 - **Maximum per user** — how many tickets of this type a single person may
-  hold at once (default 1). Enforced across every way a ticket can be
-  issued — purchase, promo code, and auto-grant alike.
+  hold at once. A newly-created ticket type defaults to 1; leave the field
+  blank for unlimited (ticket types created before this setting existed
+  stay unlimited). Enforced across every way a ticket can be issued —
+  purchase, promo code, and auto-grant alike.
 - **Presenter only** — restrict this ticket type to users who are an
   accepted speaker on at least one submission in the linked Conference
   Program activity (see below).
 - **Valid from / until** — an optional access window, for e.g. a
   single-day ticket that should only admit on that day.
 - **Visible** — hide a ticket type from the purchase page without deleting
-  it (useful once a ticket type sells out or a phase of sales ends).
+  it (useful once a ticket type sells out or a phase of sales ends). A
+  hidden type can't be bought at all — not even by someone re-using an old
+  payment link.
+
+Deleting a ticket type also deletes its promo codes (they could never be
+redeemed again anyway); the confirmation dialog tells you how many promo
+codes and already-issued tickets the type has — issued tickets are never
+affected by deleting their type.
 
 ### Presenter-only tickets
 
@@ -139,7 +151,7 @@ never generates a payment receipt, since no payment occurred.
 Open **Manage templates** to design the four kinds of document this
 activity can produce, using a rich-text (TinyMCE) editor. Each template
 type is edited separately, and starts pre-filled with a simple built-in
-layout you can freely rewrite. Insert any of these placeholders anywhere in
+layout (in your site's language) you can freely rewrite. Insert any of these placeholders anywhere in
 a template — they're replaced with the real value when a document is
 generated (the exact markers shown below, `[[like this]]`, are this site's
 current delimiter — see

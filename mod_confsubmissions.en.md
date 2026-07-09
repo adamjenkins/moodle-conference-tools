@@ -90,13 +90,14 @@ For each field you define, choose:
 
 - **Field name** — shown as the question label on the submission form.
 - **Field type** — text (single line), text area (multi-line), checkbox,
-  date, dropdown/menu (with your own list of options), multi-select menu, or
-  number. Pick the type that matches the kind of answer you want; a dropdown
-  keeps answers consistent for later filtering, while a text area suits
-  free-form answers.
+  date, dropdown/menu (with your own list of options), number, or URL. Pick
+  the type that matches the kind of answer you want; a dropdown keeps
+  answers consistent for later filtering, while a text area suits free-form
+  answers. **A field's type locks once any submission has answered it** —
+  stored answers only make sense under the type they were collected with, so
+  to change type, delete the field (which removes its answers) and add a
+  new one.
 - **Required** — whether presenters must fill it in before submitting.
-- **Enabled** — you can disable a field temporarily without deleting it (and
-  its previously-collected answers).
 
 Fields you add here appear on the submission form in the order you set, and
 their answers are visible alongside the rest of the submission wherever
@@ -161,13 +162,15 @@ only a presenter editing their own submission is). While editing another
 presenter's submission, a banner reminds you whose submission you're
 changing. The same **Edit** link also appears next to each submission on
 Conference Program's Decision report, so you can fix a track without
-leaving the review workflow.
+leaving the review workflow, and on a submission's own detail page.
 
 ### Notifications
 
 Presenters are automatically emailed when a submission is made (every
-speaker with a Moodle account, not just the submitter), and every editing
-teacher in the course is emailed if a submission is withdrawn.
+speaker with a Moodle account, not just the submitter), and every organiser
+who can edit any submission (editing teachers and managers by default —
+anyone holding the *Edit any submission* capability) is emailed if a
+submission is withdrawn.
 
 Open **Manage notifications** to customise the subject and message body sent
 for each of these, or to switch off notifications entirely for this

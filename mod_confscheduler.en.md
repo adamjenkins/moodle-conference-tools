@@ -113,8 +113,10 @@ your conference's start/end dates (even a day with nothing scheduled on
 it yet, so you can still drop a presentation onto it), plus **All days**,
 which lists every day as its own separate table on the same page instead
 of one day at a time — handy for a quick overview of the whole event.
-Editing (dragging blocks) is only available one day at a time; switch
-away from "All days" first if you want to reschedule something.
+Editing by dragging is only available one day at a time — switch away
+from "All days" first if you want to reschedule something. The other edit
+controls on a block (the pencil to edit a span block, the × to unschedule
+or delete) work in the All days view too, with the same confirmations.
 
 Any time outside your conference's start/end dates is shown with a
 diagonal grey hatch, and you can't drop a presentation into it — dragging
@@ -216,10 +218,18 @@ repeat it. Clicking a nested tile still opens the presentation's full
 detail page, exactly like a normally-scheduled block.
 
 Moving or resizing the container takes every presentation nested inside it
-along for the ride — they always share the container's own time. Deleting
+along for the ride — they always share the container's own time, and a
+nested presentation can never be moved on its own (to pull one out, remove
+it from the container, which returns it to the unscheduled panel). Deleting
 a container asks you to confirm first if it still has anything nested
-inside, since removing it returns every one of those presentations to the
-**unscheduled** list on the left.
+inside — including in the **All days** view — since removing it returns
+every one of those presentations to the **unscheduled** list on the left.
+
+As everywhere in the scheduler, a presentation can only be scheduled once
+per instance: trying to place one that is already on the grid (for example
+from a stale browser tab, or a colleague scheduling at the same time) is
+refused with an "already scheduled" message rather than creating a
+duplicate.
 
 Two things this doesn't do yet: you can't drag a presentation straight onto
 a container (use its **+** button instead), and there's no way to reorder
@@ -294,7 +304,10 @@ published, read-only schedule:
 - Click the **star** to add a session to **My timetable**, then use the
   **My timetable** toggle to highlight your favourites and grey out
   everything else — handy for finding your own sessions at a glance in a
-  busy schedule.
+  busy schedule. A poster session or keynote panel that contains one of
+  your starred presentations stays at full strength too (only its
+  unstarred tiles grey out), so a favourite inside a container never
+  fades.
 - Once you've starred your favourites, click **Export my timetable (.ics)**
   next to the My timetable toggle to download them as a calendar file you
   can import into any calendar app (Google Calendar, Outlook, Apple
@@ -302,8 +315,9 @@ published, read-only schedule:
 - Click a **track pill** to see everything else in that track.
 - A poster session or keynote panel (a container block) shows each of its
   presentations as its own small tile inside it — click one just like any
-  other scheduled block to see its full detail, and star it to add it to
-  your timetable if it has one.
+  other scheduled block to see its full detail, and star it (the star sits
+  in the tile's top-right corner, whatever text alignment the organiser
+  chose) to add it to your timetable.
 
 ## Printing the schedule
 
