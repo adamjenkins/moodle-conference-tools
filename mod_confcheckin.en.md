@@ -234,15 +234,22 @@ paid tickets.
 
 At the event, a staff member with the check-in capability opens **Scan
 check-in** from the activity's main page (also available inside the Moodle
-app). The scanner always offers a text field, so any USB or Bluetooth
-barcode scanner works out of the box — it types the code like a keyboard, and
-the check-in is recorded the moment a badge is scanned. Where the browser
-supports it, a **Scan with camera** button also appears for phone or tablet
-cameras. A successful camera scan flashes the preview border green, shows a
-green checkmark, and plays a short beep (mute it with the on-screen toggle
-if scanning in a quiet space). Re-scanning an already-checked-in badge shows
-"already checked in" rather than duplicating the record, and a badge from
-the wrong event is clearly rejected.
+app). The camera starts automatically — there's no text field or button to
+use, and no USB/Bluetooth barcode-scanner-gun support any more; a working
+camera is required. If the device has more than one camera, a dropdown
+appears to switch between them. A successful scan flashes the preview
+border green, shows a green checkmark, and plays a short beep (mute it with
+the on-screen toggle if scanning in a quiet space). Re-scanning an
+already-checked-in badge shows "already checked in" rather than duplicating
+the record, and a badge from the wrong event is clearly rejected. For
+privacy, the attendee's name shown after each scan (both the main result
+message and the running scan log below it) automatically disappears again
+after 3 seconds.
+
+If the camera can't be accessed at all — permission denied, no camera
+present, the page loaded without HTTPS, or the browser doesn't support
+camera access — a clear message explains why, since there's no other way to
+check someone in from this page.
 
 ### The check-in report
 
