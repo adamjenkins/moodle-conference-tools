@@ -41,7 +41,7 @@
         },
         {
             "title": "<span lang=\"en\" class=\"multilang\">Reading the grid</span><span lang=\"ja\" class=\"multilang\">グリッドの見かた</span>",
-            "content": "<p><span lang=\"en\" class=\"multilang\">Rooms run across the top, time down the side. Coloured blocks are talks — click one for its details. Bars that span several rooms are shared items like breaks and plenaries.</span><span lang=\"ja\" class=\"multilang\">上部に会場、左側に時間が並びます。色付きのブロックは発表で、クリックすると詳細を確認できます。複数の会場にまたがる横棒は、休憩や全体セッションなどの共有項目です。</span></p>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Rooms run across the top, time down the side. Coloured blocks are talks — click anywhere on one, not just its title, for its details. Bars that span several rooms are shared items like breaks and plenaries.</span><span lang=\"ja\" class=\"multilang\">上部に会場、左側に時間が並びます。色付きのブロックは発表です。タイトル部分に限らずどこをクリックしても詳細を確認できます。複数の会場にまたがる横棒は、休憩や全体セッションなどの共有項目です。</span></p>",
             "contentformat": "1",
             "targettype": "0",
             "targetvalue": ".mod_confscheduler-display",
@@ -51,7 +51,7 @@
         },
         {
             "title": "<span lang=\"en\" class=\"multilang\">Poster sessions and keynote panels</span><span lang=\"ja\" class=\"multilang\">ポスターセッションと基調講演パネル</span>",
-            "content": "<p><span lang=\"en\" class=\"multilang\">Some span blocks hold several presentations at once -- a poster session or keynote panel. Each one appears as its own small tile inside the block; click it just like any other talk to see its details, and star it to add it to <strong>My timetable</strong> if it has one.</span><span lang=\"ja\" class=\"multilang\">一部のスパンブロックには、ポスターセッションや基調講演パネルのように複数の発表がまとめて収められています。それぞれの発表はブロック内の小さなタイルとして表示され、他の発表と同様にクリックすると詳細を確認できます。スターがあれば、それをクリックして<strong>マイタイムテーブル</strong>に追加できます。</span></p>",
+            "content": "<p><span lang=\"en\" class=\"multilang\">Some span blocks hold several presentations at once -- a poster session or keynote panel. Each one appears as its own small tile inside the block, with a track pill if it has one; click anywhere on a tile just like any other talk to see its details, and star it to add it to <strong>My timetable</strong> if it has one.</span><span lang=\"ja\" class=\"multilang\">一部のスパンブロックには、ポスターセッションや基調講演パネルのように複数の発表がまとめて収められています。それぞれの発表はブロック内の小さなタイルとして表示され、トラックが設定されていればトラックのピルも表示されます。他の発表と同様にタイルのどこをクリックしても詳細を確認できます。スターがあれば、それをクリックして<strong>マイタイムテーブル</strong>に追加できます。</span></p>",
             "contentformat": "1",
             "targettype": "0",
             "targetvalue": ".mod_confscheduler-container-children",
