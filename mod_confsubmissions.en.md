@@ -169,6 +169,22 @@ changing. The same **Edit** link also appears next to each submission on
 Conference Program's Decision report, so you can fix a track without
 leaving the review workflow, and on a submission's own detail page.
 
+A withdrawn submission shows an **Unwithdraw** link in this view (editing
+teachers and managers only). Unwithdrawing restores whatever status the
+submission held immediately before it was withdrawn — accepted, rejected,
+or submitted — rather than always resetting it to submitted, so a presenter
+who withdraws an already-accepted talk and then changes their mind doesn't
+lose that decision.
+
+### Multi-language content
+
+Track names, submission type names, custom field names, and disabled
+preferred-date reasons all support Moodle's **Multi-Language Content**
+filter, if it's enabled on your site. Wrap each language's version in a
+`<span lang="xx" class="multilang">...</span>` tag (one span per language)
+when typing the name/reason, and site visitors will each see only the
+version matching their own language setting.
+
 ### Notifications
 
 **Notifications are off by default** for a newly added instance — turn on

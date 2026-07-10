@@ -177,13 +177,19 @@ glance that it's outside the normal day.
 
 For anything that isn't a submitted presentation — a plenary, lunch break,
 or a keynote spanning multiple rooms — use **Add span block**. Give it a
-label, a colour, a time range, and the range of rooms it should span. Like
-rooms, its text colour automatically adjusts for contrast against your
-chosen colour.
+label, a colour, a time range, and the range of rooms it should span. The
+dialog doesn't ask you to pick a date: a new block always lands on whichever
+day the schedule is currently showing (shown read-only in the dialog), and
+its start/end time default to a sensible 12:00–13:00 (lunchtime) slot you
+can adjust — handy since a plenary or lunch break is exactly the kind of
+block you're adding while looking at one specific day. Like rooms, its text
+colour automatically adjusts for contrast against your chosen colour.
 
 Span blocks can be **edited after creation**: click an existing span block
 (with Edit mode on) to reopen the same form, pre-filled, and change its
-label, colour, time, or room range.
+label, colour, time, or room range. Editing keeps the block on its own
+existing day (also shown read-only) — to move a block to a different day,
+delete it and add a new one there instead.
 
 Any span block can also have a **Displayed room name**: type your own text
 (e.g. "Exhibit Hall") and it replaces the real room name(s) shown on the

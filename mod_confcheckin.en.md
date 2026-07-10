@@ -74,12 +74,22 @@ For each ticket type, set:
 - **Presenter only** — restrict this ticket type to users who are an
   accepted speaker on at least one submission in the linked Conference
   Program activity (see below).
-- **Valid from / until** — an optional access window, for e.g. a
-  single-day ticket that should only admit on that day.
+- **Available from / until** — an optional *acquisition* window: the period
+  during which this ticket type can be purchased or claimed at all, not a
+  restriction on when the ticket itself admits entry. Useful for
+  time-limited campaigns like an early-bird price window, or closing sales
+  for a type a set number of days before the event. Outside the window, the
+  ticket type can't be bought or claimed — enforced server-side, not just
+  hidden in the interface. **Show availability window to users** controls
+  whether the actual "Available from"/"Available until" dates are shown on
+  the purchase page: leave it on to tell attendees exactly when a type
+  opens/closes, or turn it off to just show a generic "not currently
+  available" message without revealing the campaign dates themselves.
 - **Visible** — hide a ticket type from the purchase page without deleting
   it (useful once a ticket type sells out or a phase of sales ends). A
   hidden type can't be bought at all — not even by someone re-using an old
-  payment link.
+  payment link. On the Manage ticket types page, this is a switch you can
+  flip directly in the table, without opening the edit form.
 
 Deleting a ticket type also deletes its promo codes (they could never be
 redeemed again anyway); the confirmation dialog tells you how many promo
@@ -159,6 +169,8 @@ current delimiter — see
 
 - `[[fullname]]`, `[[email]]` — the attendee's name and email address.
 - `[[tickettype]]` — the name of their ticket type.
+- `[[cost]]` — the ticket type's price, correctly formatted for its
+  currency (e.g. free tickets show as such rather than "0.00").
 - `[[confcheckinname]]` — this activity's own name.
 - `[[coursefullname]]`, `[[courseshortname]]` — this activity's own
   course's full and short name.
@@ -186,6 +198,10 @@ when the document is generated — it never shows up as literal marker text.
   generated for a free, promo-code, or auto-granted ticket.
 - **Certificate** — the attendance certificate, released only after the
   attendee has been checked in (see below).
+
+All four PDF types embed a Japanese-capable font, so Japanese (and other
+non-Latin-script) text in your template — or in an attendee's own name —
+renders correctly instead of as mojibake, with no extra setup needed.
 
 ### Customising what presentationinfo shows
 
@@ -276,7 +292,10 @@ page lists everything you've claimed so far, with download links for each.
 Some ticket types are restricted to presenters, or to members of a
 specific course group or a specific enrolment method — if you don't meet
 one of these requirements, that ticket type simply won't appear as
-available to you.
+available to you. A ticket type can also only be purchased or claimed
+during a specific window (e.g. an early-bird period); outside that window
+you'll either see the exact dates it opens/closes, or just a generic "not
+currently available" message, depending on how the organiser configured it.
 
 ### Your badge and QR code
 
@@ -316,6 +335,13 @@ group or a specific enrolment method — these are two independent
 requirements the organiser can set per ticket type, either alone, both
 together, or neither. Check with the organiser if you believe you should
 qualify.
+
+**A ticket type I want is showing as "not currently available" — why?**
+It's outside its acquisition window (e.g. an early-bird period that hasn't
+opened yet, or has already closed). Depending on how the organiser
+configured it, you may see the exact dates it's available, or just this
+generic message — check with the organiser if you need to know when it
+opens.
 
 **Is the "badge" the same as a Moodle Open Badge?**
 No. In this activity, "badge" always means the printed name badge/nametag

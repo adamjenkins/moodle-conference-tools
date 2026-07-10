@@ -19,6 +19,7 @@ The activity always operates in one of two **phases**:
 
 - [For organisers](#for-organisers)
   - [Adding the activity](#adding-the-activity)
+  - [Blind review](#blind-review)
   - [Assigning reviewers](#assigning-reviewers)
   - [Setting up a rubric](#setting-up-a-rubric)
   - [The "unvetted" flag](#the-unvetted-flag)
@@ -44,6 +45,24 @@ The activity always operates in one of two **phases**:
 The current phase and the button to switch it are only shown to organisers
 with editing turned on — attendees and reviewers never see raw phase
 plumbing on the page.
+
+### Blind review
+
+Turn on **Blind review** in the activity's settings to hide submitter and
+reviewer identities from each other throughout the review workflow — this
+covers the speaker list *and* every organiser-defined custom field on the
+submission (since a free-text field like "Author bio" could just as easily
+identify someone), not just the fixed name field. This only affects what's
+displayed on screen; it doesn't restrict what's stored, and it has no effect
+once the instance switches to Display phase (identity is meant to be public
+there, after decisions are made).
+
+By default, only the **Manager** role bypasses blind review. If you want
+another role (e.g. a co-organiser who also reviews) to see identities while
+reviewing, grant them the *View real submitter/reviewer identities*
+capability explicitly at the activity or course level — don't rely on a
+role that also happens to have editing rights, since editing rights and the
+identity bypass are deliberately separate permissions.
 
 ### Assigning reviewers
 
@@ -183,7 +202,9 @@ Resubmit template only — `[[feedbackurl]]`.
 Open **My review queue** to see submissions assigned to you. For each:
 
 1. Open the review screen and read the submission (if blind review is on,
-   speaker names/identifying details are hidden from you).
+   the speaker list and every custom field are hidden from you, replaced
+   with a notice — the title, track, and abstract are always shown, since
+   blind review hides *who*, not *what*).
 2. Score it against the organiser's rubric.
 3. Submit your review. You can typically revise a review until the
    organiser records a final decision, depending on the review round.
